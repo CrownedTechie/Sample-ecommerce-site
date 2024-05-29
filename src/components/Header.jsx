@@ -1,5 +1,5 @@
 import '../stylings/Header.css';
-import Button from './Button';
+import IconBtn from './IconBtn';
 import DisplayList from './DisplayList';
 
 const Header = () => {
@@ -23,10 +23,10 @@ const Header = () => {
                 </nav>
 
                 <div className='header-btns flex gap-4 font-bold'>
-                    <Button icon='person' value='Login / Register' />
-                    <Button icon='search' />
-                    <Button icon='shopping_cart' />
-                    <Button icon='favorite' />
+                    <IconBtn icon='person' value='Login / Register' />
+                    <IconBtn icon='search' />
+                    <IconBtn icon='shopping_cart' />
+                    <IconBtn icon='favorite' />
 
                 </div>
                 

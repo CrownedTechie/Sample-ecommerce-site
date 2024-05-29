@@ -1,0 +1,17 @@
+.product-card h5 {
+    color: #252B42;
+}
+
+.product-card > p {
+    color: #737373;
+
+}
+
+.old-price {
+    color: #BDBDBD;
+}
+
+.new-price {
+    color: #23856D;
+
+}
