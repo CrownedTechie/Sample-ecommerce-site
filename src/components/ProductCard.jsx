@@ -1,7 +1,7 @@
 import DisplayImg from './DisplayImg';
 import '../stylings/ProductCard.css';
 
-const ProductCard = ({img}) => {
+const ProductCard = ({img, title, dept, oldPrice, discountedPrice}) => {
   return (
       <>
           <div className="product-card flex flex-col gap-3">
