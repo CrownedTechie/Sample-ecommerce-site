@@ -19,8 +19,8 @@ const Navbar = () => {
         <h2>Follow Us and get a chance to win 80% off </h2>
         
         <div className="follow-us flex items-center">
-          Follow Us : 
-           <div className="socials flex gap-4 ml-4">
+          Follow Us :
+          <div className="socials flex gap-4 ml-4">
             <img src={instagram} alt="" />
             <img src={youtube} alt="" />
             <img src={facebook} alt="" />
@@ -32,6 +32,6 @@ const Navbar = () => {
      
     </>
   )
-}
+};
 
 export default Navbar;
