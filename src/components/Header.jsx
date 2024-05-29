@@ -7,7 +7,7 @@ const Header = () => {
 
     return (
         <>
-            <header className='py-4 px-9 flex items-center justify-between'>
+            <header className='py-6 px-9 flex items-center justify-between'>
 
                 <nav className='flex items-center justify-between w-6/12'>
                 <h1 className='brand-name font-bold text-3xl'>Bandage</h1>

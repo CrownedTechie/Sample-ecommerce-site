@@ -11,4 +11,4 @@ const DisplayList = () => {
   )
 }
 
-export default DisplayList
+export default DisplayList;

@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
+import FurnitureSection from "../components/FurnitureSection";
 
 
 const ShopPage = () => {
@@ -7,6 +8,8 @@ const ShopPage = () => {
       <>
         <Navbar />
         <Header />
+        <FurnitureSection />
+
       </>
   )
 }
