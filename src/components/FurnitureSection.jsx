@@ -7,7 +7,7 @@ import DisplayImg from './DisplayImg';
 const FurnitureSection = () => {
   return (
       <>
-          <section className='flex justify-center py-16 border-2 border-blue-500'>
+          <section className='flex justify-center py-16'>
 
             <div className=' grid grid-rows-2 grid-flow-col gap-3'>
               <DisplayImg img={furniture1} styling='row-span-3'  />

@@ -1,4 +1,4 @@
-import './Header.css';
+import '../stylings/Header.css';
 import Button from './Button';
 import DisplayList from './DisplayList';
 

@@ -1,4 +1,4 @@
-import './Navbar.css';
+import '../stylings/Navbar.css';
 import Button from './Button';
 import instagram from '../assets/instagram.png';
 import youtube from '../assets/youtube.png';
