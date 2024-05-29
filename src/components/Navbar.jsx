@@ -1,5 +1,5 @@
-import './Navbar.css';
-import Button from './Button';
+import '../stylings/Navbar.css';
+import IconBtn from './IconBtn';
 import instagram from '../assets/instagram.png';
 import youtube from '../assets/youtube.png';
 import facebook from '../assets/facebook.png';
@@ -12,8 +12,8 @@ const Navbar = () => {
       <div className="header-alert py-4 text-white font-bold lg:flex justify-around items-center sm:hidden md:hidden">
 
         <div className="contact-us flex gap-6">
-          <Button icon='call' value='(225) 555-0118' />
-          <Button icon='mail' value='michelle.rivera@example.com' />
+          <IconBtn icon='call' value='(225) 555-0118' />
+          <IconBtn icon='mail' value='michelle.rivera@example.com' />
         </div>
 
         <h2>Follow Us and get a chance to win 80% off </h2>

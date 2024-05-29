@@ -1,14 +1,14 @@
 
-const Button = ({ icon, value }) => {
+const IconBtn = ({ icon, value, styling}) => {
   return (
     <>
       <div className="btn-box flex items-center gap-2">
         <span className="material-symbols-outlined">{icon}</span>
 
-        <button className=" "> {value}</button>
+        <button className={ styling }> {value}</button>
       </div>
     </>
   )
 }
 
-export default Button;
+export default IconBtn;
