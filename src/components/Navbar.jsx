@@ -9,7 +9,7 @@ import twitter from '../assets/twitter.png';
 const Navbar = () => {
   return (
     <>
-      <div className="header-alert py-4 text-white font-bold lg:flex justify-around items-center sm:hidden md:hidden">
+      <div className="header-alert">
 
         <div className="contact-us flex gap-6">
           <IconBtn icon='call' value='(225) 555-0118' />
