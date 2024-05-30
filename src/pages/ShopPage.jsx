@@ -12,6 +12,7 @@ import twoPager from "../assets/two-pager.png";
 import FeaturedPosts from "../components/FeaturedPosts";
 import PostCard from "../components/PostCard";
 import '../stylings/ShopPage.css';
+import Testimonials from "../components/Testimonials";
 
 
 const ShopPage = () => {
@@ -82,7 +83,7 @@ const ShopPage = () => {
         </section>
       </FeaturedPosts>
 
-
+      <Testimonials />
 
       </>
   )
