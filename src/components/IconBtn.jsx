@@ -5,7 +5,7 @@ const IconBtn = ({ icon, value, styling}) => {
       <div className="btn-box flex items-center gap-2">
         <span className="material-symbols-outlined">{icon}</span>
 
-        <button className={ styling }> {value}</button>
+        <button className={ styling }>{value}</button>
       </div>
     </>
   )
