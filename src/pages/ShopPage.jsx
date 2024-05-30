@@ -14,6 +14,7 @@ import PostCard from "../components/PostCard";
 import '../stylings/ShopPage.css';
 import Testimonials from "../components/Testimonials";
 import CallToAction from "../components/CallToAction";
+import Footer from "../components/Footer";
 
 
 const ShopPage = () => {
@@ -87,6 +88,8 @@ const ShopPage = () => {
       <Testimonials />
 
       <CallToAction />
+
+      <Footer />
 
     </>
   )

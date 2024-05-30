@@ -1,0 +1,84 @@
+.footer-top, .footer-bottom {
+    background: #FAFAFA;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 4.2rem 10rem;
+}
+
+.footer-top h3, .footer-center h4 {
+    color: #252B42;
+    font-weight: 700;
+}
+
+.footer-top h3 {
+    font-size: 1.5rem;
+}
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-center li, .footer-bottom {
+    color: #737373;
+    font-weight: 700;
+}
+
+.footer-center {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 6.2rem 10rem;
+    gap: 3rem;
+}
+
+.footer-center ul {
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+}
+
+.footer-center ul > li {
+    font-size: .875rem;
+}
+
+.footer-center > ul:nth-of-type(5) > p {
+    color: #737373;
+    font-size: .9rem;
+    margin-top: .5rem;
+}
+
+.input-box {
+    display: flex;
+    border: 1px solid #E6E6E6;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.input-box > input {
+    background: #F9F9F9;
+    padding: 1rem;
+    border-radius: 5px 0 0 5px;
+}
+
+.input-box > input::placeholder {
+    color: #737373;
+}
+
+.getInTouch-btn {
+    background: #23A6F0;
+    color: white;
+    padding: 1rem;
+    border-radius: 0 5px 5px 0;
+    font-size: .9rem;
+}
+
+.footer-bottom {
+    padding: 2.2rem 10rem;
+    font-size: .875rem;
+}
