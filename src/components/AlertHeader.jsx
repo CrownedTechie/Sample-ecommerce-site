@@ -6,7 +6,7 @@ import facebook from '../assets/facebook.png';
 import twitter from '../assets/twitter.png';
 
 
-const Navbar = () => {
+const AlertHeader = () => {
   return (
     <>
       <div className="header-alert">

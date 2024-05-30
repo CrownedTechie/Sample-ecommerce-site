@@ -7,12 +7,12 @@ const Header = () => {
 
     return (
         <>
-            <header className='py-6 px-9 flex items-center justify-between'>
+            <header className='header'>
 
-                <nav className='flex items-center justify-between w-6/12'>
-                <h1 className='brand-name font-bold text-3xl'>Bandage</h1>
+                <nav>
+                <h1 className='brand-name'>Bandage</h1>
 
-                    <ul className='nav-links flex gap-4 font-medium'>
+                    <ul className='nav-links'>
                         <li>Home</li>
                         <li>Shop</li>
                         <li>About</li>
@@ -22,7 +22,7 @@ const Header = () => {
                     </ul>
                 </nav>
 
-                <div className='header-btns flex gap-4 font-bold'>
+                <div className='header-btns'>
                     <IconBtn icon='person' value='Login / Register' />
                     <IconBtn icon='search' />
                     <IconBtn icon='shopping_cart' />
