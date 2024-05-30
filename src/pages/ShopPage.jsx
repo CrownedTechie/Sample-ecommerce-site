@@ -8,8 +8,10 @@ import IconBtn from "../components/IconBtn";
 import ServiceCard from "../components/ServiceCard";
 import trendingUp from "../assets/trending-up.png";
 import bookReader from "../assets/bookReader.png";
-import twoPager from "../assets/two-pager.png"
-import '../stylings/ShopPage.css'
+import twoPager from "../assets/two-pager.png";
+import FeaturedPosts from "../components/FeaturedPosts";
+import PostCard from "../components/PostCard";
+import '../stylings/ShopPage.css';
 
 
 const ShopPage = () => {
@@ -63,11 +65,24 @@ const ShopPage = () => {
               text='Overcame any hurdle or any other problem.'
               />
           </div>
-         
-          
+    
         </section>
-       
       </FeaturedProduct>
+
+      <FeaturedPosts>
+        <section className="flex justify-center items-center">
+
+          <div className="grid grid-cols-3 gap-2">
+            <PostCard />
+            <PostCard />
+            <PostCard />
+          </div>
+         
+        </section>
+      </FeaturedPosts>
+
+
+
       </>
   )
 }
