@@ -1,0 +1,48 @@
+.testimonials-section {
+    padding: 10rem 7rem;
+    margin: 5rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-content: center;
+    justify-items: center;
+    gap: 9rem;
+}
+
+.testimonials-review {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.testimonials-review h4, .reviewer-job p  {
+    font-weight: 700;
+    color: #252B42;
+}
+
+.testimonials-review h4 {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.testimonials-review h5 {
+    line-height: 2;
+    color: #737373;
+    font-weight: 700;
+}
+
+.reviewer-job h6 {
+    color: #23A6F0;
+    font-weight: 700;
+    margin-bottom: .5rem;
+    text-transform: capitalize;
+}
+
+.testimonials-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: row;
+    gap: 1.15rem;
+}
