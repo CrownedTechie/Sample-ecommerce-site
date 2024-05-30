@@ -1,0 +1,49 @@
+.CallToAction-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('../assets/background.png');
+    background-repeat: no-repeat;
+    height: 40rem;
+    padding-top: 10rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    gap: 2rem;
+    text-align: center;
+}
+
+.CallToAction-heading h6, .CallToAction-heading h2, .CallToAction-heading h3, .CallToAction-heading button {
+    font-weight: 700;
+}
+
+.CallToAction-heading h6 {
+    color: #23A6F0;
+    font-size: 1rem;
+}
+
+.CallToAction-heading h2 {
+    color: #252B42;
+    font-size: 2.5rem;
+    padding: 0 15rem;
+}
+
+.CallToAction-heading p {
+    color: #737373;
+    padding: 0 15rem;
+    font-size: 1.2rem;
+
+}
+
+.CallToAction-heading h3 {
+    color: #23856D;
+    font-size: 1.5rem;
+}
+
+.CallToAction-btn {
+    background: #23A6F0;
+    padding: 1rem 2.2rem;
+    border-radius: 0.3125rem;
+    text-transform: uppercase;
+    color: white;
+}

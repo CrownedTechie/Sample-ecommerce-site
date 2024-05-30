@@ -13,6 +13,7 @@ import FeaturedPosts from "../components/FeaturedPosts";
 import PostCard from "../components/PostCard";
 import '../stylings/ShopPage.css';
 import Testimonials from "../components/Testimonials";
+import CallToAction from "../components/CallToAction";
 
 
 const ShopPage = () => {
@@ -85,7 +86,9 @@ const ShopPage = () => {
 
       <Testimonials />
 
-      </>
+      <CallToAction />
+
+    </>
   )
 }
 
