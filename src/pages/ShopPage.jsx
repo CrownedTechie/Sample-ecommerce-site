@@ -72,7 +72,7 @@ const ShopPage = () => {
       <FeaturedPosts>
         <section className="flex justify-center items-center">
 
-          <div className="grid grid-cols-3 gap-2">
+          <div className="grid grid-cols-3 gap-5">
             <PostCard />
             <PostCard />
             <PostCard />
