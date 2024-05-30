@@ -1,6 +1,6 @@
-import Navbar from "../components/Navbar";
+import AlertHeader from "../components/AlertHeader";
 import Header from "../components/Header";
-import FurnitureSection from "../components/FurnitureSection";
+import HeroSection from "../components/HeroSection";
 import FeaturedProduct from "../components/FeaturedProduct";
 import ProductCard from "../components/ProductCard";
 import lamp from '../assets/graphic-design1.png';
@@ -17,14 +17,16 @@ import '../stylings/ShopPage.css';
 const ShopPage = () => {
   return (
       <>
-        <Navbar />
+        <AlertHeader />
+      
         <Header />
-        <FurnitureSection />
+      
+        <HeroSection />
       
         <FeaturedProduct category='bestseller products'>
-        <section className="flex flex-col justify-center items-center px-24 ">
+          <section className="bestseller-products">
 
-          <div className="product grid grid-cols-5 grid-flow-row gap-9 py-16">
+          <div className="bestseller-products-cards">
             <ProductCard img={lamp} />
             <ProductCard img={lamp} />
             <ProductCard img={lamp} />
@@ -37,16 +39,15 @@ const ShopPage = () => {
             <ProductCard img={lamp} />
           </div>
 
-          <IconBtn value='load more products' styling='uppercase px-8 py-3 font-bold' />
+          <IconBtn value='load more products' styling='bestseller-products-btn' />
            
           </section>
-         
         </FeaturedProduct>
 
       <FeaturedProduct category='best services'>
-        <section className='flex justify-around items-center mt-28 mx-36'>
+        <section className='best-services'>
 
-          <div className="grid grid-cols-3">
+          <div className="best-services-card">
             <ServiceCard
               img={ bookReader }
               title='Easy Wins'
@@ -70,9 +71,9 @@ const ShopPage = () => {
       </FeaturedProduct>
 
       <FeaturedPosts>
-        <section className="flex justify-center items-center">
+        <section className=" featured-posts-section">
 
-          <div className="grid grid-cols-3 gap-5">
+          <div className="featured-posts-card">
             <PostCard />
             <PostCard />
             <PostCard />

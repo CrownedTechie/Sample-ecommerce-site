@@ -1,0 +1,25 @@
+.hero-section {
+    display: flex;
+    justify-content: center;
+    padding: 4rem 0;
+}
+
+.hero-images {
+    display: grid;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    grid-auto-flow: column;
+    gap: 0.75rem;
+}
+
+.hero-images img:nth-of-type(1) {
+    grid-row: span 3/span 3;
+}
+
+.hero-images img:nth-of-type(2) {
+    grid-column: span 2/span 2;
+}
+
+.hero-images img:nth-of-type(3), .hero-images img:nth-of-type(4) {
+    grid-column: span 1/span 1;
+    grid-row: span 2/span 2;
+}

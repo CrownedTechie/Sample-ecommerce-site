@@ -1,8 +1,36 @@
+.header, .header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .brand-name, .nav-links {
     color: #252B42;
 }
 
+.header {
+    padding: 1.5rem 2.25rem;
+}
+
+.header nav {
+    width: 50%;
+}
+
+.brand-name {
+    font-weight: 700;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+
+.nav-links {
+    font-weight: 500;
+    display: flex;
+    gap: 1rem;
+}
+
 .header-btns {
     color: #23A6F0;
-
+    display: flex;
+    gap: 1rem;
+    font-weight: 700;
 }

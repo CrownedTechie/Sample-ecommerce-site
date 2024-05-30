@@ -1,0 +1,55 @@
+        /* BESTSELLER PRODUCTS (FEATURED-PRODUCTS SECTION) */
+.bestseller-products {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 6rem;
+}
+
+.bestseller-products-cards {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-auto-flow: row;
+    gap: 2.25rem;
+    padding: 4rem 0;
+}
+
+.bestseller-products-btn {
+    color: #23A6F0;
+    border: 1px solid #23A6F0;
+    border-radius: 5px;
+    text-transform: uppercase;
+    padding: 0.75rem 2rem;
+    font-weight: 700;
+}
+
+
+        /* BEST SERVICES (FEATURED-PRODUCTS SECTION) */
+.best-services {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 9rem;
+    margin-right: 9rem;
+    margin-top: 7rem;
+}
+
+.best-services-card {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+
+        /* FEATURED-POSTS SECTION)*/
+.featured-posts-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured-posts-card {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+}

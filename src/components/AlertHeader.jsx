@@ -1,4 +1,4 @@
-import '../stylings/Navbar.css';
+import '../stylings/AlertHeader.css';
 import IconBtn from './IconBtn';
 import instagram from '../assets/instagram.png';
 import youtube from '../assets/youtube.png';
@@ -6,21 +6,21 @@ import facebook from '../assets/facebook.png';
 import twitter from '../assets/twitter.png';
 
 
-const Navbar = () => {
+const AlertHeader = () => {
   return (
     <>
-      <div className="header-alert py-4 text-white font-bold lg:flex justify-around items-center sm:hidden md:hidden">
+      <div className="header-alert">
 
-        <div className="contact-us flex gap-6">
+        <div className="contact-us">
           <IconBtn icon='call' value='(225) 555-0118' />
           <IconBtn icon='mail' value='michelle.rivera@example.com' />
         </div>
 
         <h2>Follow Us and get a chance to win 80% off </h2>
         
-        <div className="follow-us flex items-center">
+        <div className="follow-us">
           Follow Us :
-          <div className="socials flex gap-4 ml-4">
+          <div className="socials">
             <img src={instagram} alt="" />
             <img src={youtube} alt="" />
             <img src={facebook} alt="" />
@@ -34,4 +34,4 @@ const Navbar = () => {
   )
 };
 
-export default Navbar;
+export default AlertHeader;

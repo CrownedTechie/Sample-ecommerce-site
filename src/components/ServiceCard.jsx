@@ -4,12 +4,12 @@ import '../stylings/ServiceCard.css';
 const ServiceCard = ({img, title, text}) => {
   return (
       <>
-            <div className="service-card flex flex-col items-center gap-6 ">
-              <DisplayImg img={ img } styling='w-20'/>
+            <div className="service-card">
+              <DisplayImg img={ img } styling='service-card-image'/>
 
-              <h5 className='font-bold text-2xl'>{ title }</h5>
+              <h5>{ title }</h5>
 
-              <p className=' font-normal text-center text-base p-16'>{ text }</p>
+              <p>{ text }</p>
 
           </div>
       </>

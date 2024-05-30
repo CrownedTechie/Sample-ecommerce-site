@@ -1,10 +1,35 @@
-.product-card h5 {
+.product-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.product-card-image {
+    width: 13rem;
+}
+
+.product-card > h5, .product-card > p {
+    font-weight: 700;
+    text-align: center;
+}
+
+.product-card > h5 {
     color: #252B42;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
 }
 
 .product-card > p {
     color: #737373;
+}
 
+.price-box {
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    gap: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
 }
 
 .old-price {
@@ -13,5 +38,4 @@
 
 .new-price {
     color: #23856D;
-
 }
