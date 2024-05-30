@@ -7,7 +7,7 @@ const DisplayList = () => {
         <li key={index}>{item}</li>
       ))}
     </ul>
-      </>
+    </>
   )
 }
 
