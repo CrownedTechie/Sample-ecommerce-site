@@ -1,26 +1,56 @@
 .post-card {
     box-shadow: 0px 2px 4px 0px #0000001A;
+    width: 20rem;
 }
 
-
-.content > menu > button, .post-description, .post-details .btn-box button, .content button  {
+.post-card-content > menu > button, .post-description, .post-details .btn-box button, .post-card-content button  {
     color: #737373;
 }
 
-.post-title {
-    color: #252B42;
-}
-
-.post-details .btn-box:nth-of-type(1) span, .content button > span {
+.post-details .btn-box:nth-of-type(1) span, .post-card-content button > span {
     color: #23A6F0;
 }
 
+.post-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 1rem 1.5rem;
+}
+
+.post-card-content menu {
+    display: flex;
+    gap: 1rem;
+}
+
+.post-title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: #252B42;
+}
+
+.post-description {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.post-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-details .btn-box button {
+    font-size: 12px;
+}
 
 .post-details .btn-box:nth-of-type(2) span{
     font-weight: 800;
     color: #23856D;
 }
 
-.post-details .btn-box button {
-    font-size: 12px;
+.post-card-content > button {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-weight: 700;
 }

@@ -1,7 +1,18 @@
-.title-group > h6 {
-    color: #23A6F0;
+.featured-posts-heading {
+    text-align: center;
+    padding: 6rem 0;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
 }
 
-.title-group > h2 {
+
+.featured-posts-heading h6 {
+    color: #23A6F0;
+    margin-bottom: 0.75rem;
+}
+
+.featured-posts-heading h2 {
     color: #252B42;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
 }

@@ -71,9 +71,9 @@ const ShopPage = () => {
       </FeaturedProduct>
 
       <FeaturedPosts>
-        <section className="flex justify-center items-center">
+        <section className=" featured-posts-section">
 
-          <div className="grid grid-cols-3 gap-5">
+          <div className="featured-posts-card">
             <PostCard />
             <PostCard />
             <PostCard />

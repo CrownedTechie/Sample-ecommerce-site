@@ -39,3 +39,17 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
+
+
+        /* FEATURED-POSTS SECTION)*/
+.featured-posts-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured-posts-card {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+}
