@@ -18,13 +18,15 @@ const ShopPage = () => {
   return (
       <>
         <AlertHeader />
+      
         <Header />
+      
         <HeroSection />
       
         <FeaturedProduct category='bestseller products'>
-        <section className="flex flex-col justify-center items-center px-24 ">
+          <section className="bestseller-products">
 
-          <div className="product grid grid-cols-5 grid-flow-row gap-9 py-16">
+          <div className="bestseller-products-cards">
             <ProductCard img={lamp} />
             <ProductCard img={lamp} />
             <ProductCard img={lamp} />
@@ -37,10 +39,9 @@ const ShopPage = () => {
             <ProductCard img={lamp} />
           </div>
 
-          <IconBtn value='load more products' styling='uppercase px-8 py-3 font-bold' />
+          <IconBtn value='load more products' styling='bestseller-products-btn' />
            
           </section>
-         
         </FeaturedProduct>
 
       <FeaturedProduct category='best services'>
