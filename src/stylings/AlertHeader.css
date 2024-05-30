@@ -31,6 +31,22 @@
   }
 }
 
+.contact-us {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.follow-us {
+  display: flex;
+  align-items: center;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+  margin-left: 1rem;
+}
+
 .socials img {
   width: 1.125rem;
   height: 1.125rem;

@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar";
+import AlertHeader from "../components/AlertHeader";
 import Header from "../components/Header";
 import FurnitureSection from "../components/FurnitureSection";
 import FeaturedProduct from "../components/FeaturedProduct";
@@ -17,7 +17,7 @@ import '../stylings/ShopPage.css';
 const ShopPage = () => {
   return (
       <>
-        <Navbar />
+        <AlertHeader />
         <Header />
         <FurnitureSection />
       
