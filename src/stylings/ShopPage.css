@@ -1,3 +1,4 @@
+        /* BESTSELLER PRODUCTS (FEATURED-PRODUCTS SECTION) */
 .bestseller-products {
     display: flex;
     flex-direction: column;
@@ -21,4 +22,20 @@
     text-transform: uppercase;
     padding: 0.75rem 2rem;
     font-weight: 700;
+}
+
+
+        /* BEST SERVICES (FEATURED-PRODUCTS SECTION) */
+.best-services {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 9rem;
+    margin-right: 9rem;
+    margin-top: 7rem;
+}
+
+.best-services-card {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 }

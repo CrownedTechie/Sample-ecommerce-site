@@ -45,9 +45,9 @@ const ShopPage = () => {
         </FeaturedProduct>
 
       <FeaturedProduct category='best services'>
-        <section className='flex justify-around items-center mt-28 mx-36'>
+        <section className='best-services'>
 
-          <div className="grid grid-cols-3">
+          <div className="best-services-card">
             <ServiceCard
               img={ bookReader }
               title='Easy Wins'
