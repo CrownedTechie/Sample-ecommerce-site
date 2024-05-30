@@ -1,6 +1,6 @@
 import AlertHeader from "../components/AlertHeader";
 import Header from "../components/Header";
-import FurnitureSection from "../components/FurnitureSection";
+import HeroSection from "../components/HeroSection";
 import FeaturedProduct from "../components/FeaturedProduct";
 import ProductCard from "../components/ProductCard";
 import lamp from '../assets/graphic-design1.png';
@@ -19,7 +19,7 @@ const ShopPage = () => {
       <>
         <AlertHeader />
         <Header />
-        <FurnitureSection />
+        <HeroSection />
       
         <FeaturedProduct category='bestseller products'>
         <section className="flex flex-col justify-center items-center px-24 ">
