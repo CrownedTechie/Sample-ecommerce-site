@@ -1,3 +1,5 @@
+export const NAV_LINKS = ['Home', 'Shop', 'About', 'Blog', 'Contact', 'Pages'];
+
 export const FOOTER_LINKS = [
     {
         title: 'Company Info',

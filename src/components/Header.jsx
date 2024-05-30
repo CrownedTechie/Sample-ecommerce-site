@@ -1,24 +1,20 @@
 import '../stylings/Header.css';
 import IconBtn from './IconBtn';
-import DisplayList from './DisplayList';
+import { NAV_LINKS } from '../data';
+
 
 const Header = () => {
-    const NAV_LINKS = ['Home', 'Shop', 'About', 'Blog', 'Contact', 'Pages'];
 
     return (
         <>
             <header className='header'>
-
                 <nav>
-                <h1 className='brand-name'>Bandage</h1>
+                    <h1 className='brand-name'>Bandage</h1>
 
                     <ul className='nav-links'>
-                        <li>Home</li>
-                        <li>Shop</li>
-                        <li>About</li>
-                        <li>Blog</li>
-                        <li>Contact</li>
-                        <li>Pages</li>
+                        {NAV_LINKS.map((link, index) => (
+                            <li key={index}>{ link }</li>
+                       ))}
                     </ul>
                 </nav>
 
@@ -27,9 +23,7 @@ const Header = () => {
                     <IconBtn icon='search' />
                     <IconBtn icon='shopping_cart' />
                     <IconBtn icon='favorite' />
-
                 </div>
-                
             </header>
            
         </>
