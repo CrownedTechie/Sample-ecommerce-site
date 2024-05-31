@@ -67,6 +67,20 @@
 }
 
 
+        /* MOBILE DESIGN FOR BEST SERVICES */
+@media screen and (max-width: 768px) {
+    .best-services {
+       margin: 4rem 0;
+    }
+  
+    .best-services-card {
+        grid-template-columns: none;
+    }
+}
+
+
+
+
         /* FEATURED-POSTS SECTION)*/
 .featured-posts-section {
     display: flex;
