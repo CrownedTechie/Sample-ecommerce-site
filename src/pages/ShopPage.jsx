@@ -6,9 +6,7 @@ import ProductCard from "../components/ProductCard";
 import lamp from '../assets/graphic-design1.png';
 import IconBtn from "../components/IconBtn";
 import ServiceCard from "../components/ServiceCard";
-import trendingUp from "../assets/trending-up.png";
-import bookReader from "../assets/bookReader.png";
-import twoPager from "../assets/two-pager.png";
+import { SERVICECARD_DETAILS } from "../data";
 import FeaturedPosts from "../components/FeaturedPosts";
 import PostCard from "../components/PostCard";
 import '../stylings/ShopPage.css';
@@ -49,27 +47,11 @@ const ShopPage = () => {
 
       <FeaturedProduct category='best services'>
         <section className='best-services'>
-
           <div className="best-services-card">
-            <ServiceCard
-              img={ bookReader }
-              title='Easy Wins'
-              text='Get your best looking smile now!'
-              />
-              
-              <ServiceCard
-              img={ twoPager }
-              title='Concrete'
-              text='Defalcate is most focused in helping you discover your most beautiful smile'
-              />
-              
-              <ServiceCard
-              img={ trendingUp }
-              title='Hack Growth'
-              text='Overcame any hurdle or any other problem.'
-              />
+            <ServiceCard {...SERVICECARD_DETAILS[0]} />
+            <ServiceCard {...SERVICECARD_DETAILS[1]} />
+            <ServiceCard {...SERVICECARD_DETAILS[2]} />
           </div>
-    
         </section>
       </FeaturedProduct>
 
