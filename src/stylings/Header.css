@@ -4,7 +4,7 @@
     align-items: center;
 }
 
-.brand-name, .nav-links {
+.brand-name, .nav-links-desktop {
     color: #252B42;
 }
 
@@ -22,15 +22,76 @@
     line-height: 2.25rem;
 }
 
-.nav-links {
+.nav-links-desktop {
     font-weight: 500;
     display: flex;
     gap: 1rem;
 }
 
+.nav-links-mobile {
+    display: none;
+}
+
 .header-btns {
     color: #23A6F0;
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 1rem;
     font-weight: 700;
+} 
+
+.iconBtn-menu {
+    display: none;
 }
+
+
+
+@media screen and (max-width: 768px) {
+    .header {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 14rem;
+    }
+
+    .brand-name {
+        font-size: 1.5rem;
+    }
+
+    .nav-links-desktop {
+        display: none;
+    }
+
+    .nav-links-mobile {
+        display: flex;
+        flex-direction: column;
+        gap: .97rem;
+        color: #737373;
+        position: absolute;
+        top: 100%;
+        text-align: center;
+        left: 0;
+        right: 0;
+        z-index: 0;
+        width: 100%;
+        font-size: 1.45rem;
+        font-weight: 500;
+        margin-top: 2rem;
+    }
+
+    .iconBtn-person, .iconBtn-favorite {
+        display: none;
+    }
+
+    .iconBtn-menu {
+        display: flex;
+    }
+
+    .header-btns {
+        color: #252B42;
+    } 
+
+    .header-btns .material-symbols-outlined {
+        font-size: 1.8rem;
+    }
+  }
