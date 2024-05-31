@@ -5,7 +5,10 @@ import twoPager from "./assets/two-pager.png";
 
 
 
-export const NAV_LINKS = ['Home', 'Shop', 'About', 'Blog', 'Contact', 'Pages'];
+export const NAV_LINKS_DESKTOP = ['Home', 'Shop', 'About', 'Blog', 'Contact', 'Pages'];
+
+export const NAV_LINKS_MOBILE = ['Home', 'product', 'pricing', 'Contact'];
+
 
 export const SERVICECARD_DETAILS = [
     {
