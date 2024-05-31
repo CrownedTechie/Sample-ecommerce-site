@@ -7,7 +7,7 @@ const IconBtn = ({ icon, value, styling}) => {
       <div className="btn-box">
         <span className="material-symbols-outlined">{icon}</span>
 
-        <button className={ styling }>{value}</button>
+       { value && <button className={ styling }>{value}</button>}
       </div>
     </>
   )
