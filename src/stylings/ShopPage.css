@@ -24,6 +24,32 @@
     font-weight: 700;
 }
 
+.bestseller-products-btn:hover {
+    color: white;
+    background: #23A6F0;
+}
+
+        /* BESTSELLERS PRODUCTS MOBILE DESIGN */
+@media screen and (max-width: 768px) {
+    .bestseller-title h4 {
+        display: none;
+    }
+
+    .bestseller-products {
+        padding: 0 2rem;
+    }
+    
+    .bestseller-products-cards {
+        grid-template-columns: none;
+        padding: 3.5rem 0;
+        gap: 3.8rem;
+    }
+
+    .bestseller-products-btn {
+        font-size: .8rem;
+    }
+}
+
 
         /* BEST SERVICES (FEATURED-PRODUCTS SECTION) */
 .best-services {

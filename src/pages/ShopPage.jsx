@@ -24,7 +24,7 @@ const ShopPage = () => {
       
         <HeroSection />
       
-        <FeaturedProduct category='bestseller products'>
+        <FeaturedProduct title='featured products' category='bestseller products' extraClass='bestseller-title' >
           <section className="bestseller-products">
 
         {/* REDUNDANT. WILL BE ADJUSTED LATER */}
@@ -46,7 +46,7 @@ const ShopPage = () => {
           </section>
         </FeaturedProduct>
 
-      <FeaturedProduct category='best services'>
+      <FeaturedProduct title='featured products' category='best services'>
         <section className='best-services'>
           <div className="best-services-card">
             <ServiceCard {...SERVICECARD_DETAILS[0]} />
