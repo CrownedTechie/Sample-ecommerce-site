@@ -16,3 +16,10 @@
     font-size: 2.25rem;
     line-height: 2.5rem;
 }
+
+
+@media screen and (max-width: 768px) {
+    .featured-posts-heading {
+      padding: 1.2rem 0;
+    }
+}
