@@ -9,10 +9,10 @@ import ServiceCard from "../components/ServiceCard";
 import { SERVICECARD_DETAILS } from "../data";
 import FeaturedPosts from "../components/FeaturedPosts";
 import PostCard from "../components/PostCard";
-import '../stylings/ShopPage.css';
 import Testimonials from "../components/Testimonials";
 import CallToAction from "../components/CallToAction";
 import Footer from "../components/Footer";
+import '../stylings/ShopPage.css';
 
 
 const ShopPage = () => {
@@ -27,6 +27,7 @@ const ShopPage = () => {
         <FeaturedProduct category='bestseller products'>
           <section className="bestseller-products">
 
+        {/* REDUNDANT. WILL BE ADJUSTED LATER */}
           <div className="bestseller-products-cards">
             <ProductCard img={lamp} />
             <ProductCard img={lamp} />
