@@ -27,6 +27,9 @@ const PostCard = () => {
 
                 <button>Learn More <span className="material-symbols-outlined">arrow_forward_ios</span></button>
               </div>
+
+              <div className="alert-tag">new</div>
+
           </article>
         </>
   )
