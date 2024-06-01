@@ -1,6 +1,7 @@
 .post-card {
     box-shadow: 0px 2px 4px 0px #0000001A;
     width: 20rem;
+    position: relative;
 }
 
 .post-card-content > menu > button, .post-description, .post-details .btn-box button, .post-card-content button  {
@@ -53,4 +54,18 @@
     align-items: center;
     gap: 0.25rem;
     font-weight: 700;
+}
+
+.alert-tag {
+    position: absolute;
+    bottom: 92%;
+    background: #E74040;
+    color: white;
+    text-transform: uppercase;
+    box-shadow: 0px 2px 4px 0px #0000001A;
+    font-weight: 700;
+    font-size: .875rem;
+    padding: .125rem .625rem;
+    margin-left: 1rem;
+    border-radius: .1875rem;
 }

@@ -24,29 +24,26 @@ const ShopPage = () => {
       
         <HeroSection />
       
-        <FeaturedProduct category='bestseller products'>
+        <FeaturedProduct title='featured products' category='bestseller products' extraClass='bestseller-title' >
           <section className="bestseller-products">
-
-        {/* REDUNDANT. WILL BE ADJUSTED LATER */}
-          <div className="bestseller-products-cards">
-            <ProductCard img={lamp} />
-            <ProductCard img={lamp} />
-            <ProductCard img={lamp} />
-            <ProductCard img={lamp} />
-            <ProductCard img={lamp} />
-            <ProductCard img={lamp} />
-            <ProductCard img={lamp} />
-            <ProductCard img={lamp} />
-            <ProductCard img={lamp} />
-            <ProductCard img={lamp} />
-          </div>
-
-          <IconBtn value='load more products' styling='bestseller-products-btn' />
-           
+          {/* REDUNDANT. WILL BE ADJUSTED LATER */}
+            <div className="bestseller-products-cards">
+              <ProductCard img={lamp} />
+              <ProductCard img={lamp} />
+              <ProductCard img={lamp} />
+              <ProductCard img={lamp} />
+              <ProductCard img={lamp} />
+              <ProductCard img={lamp} />
+              <ProductCard img={lamp} />
+              <ProductCard img={lamp} />
+              <ProductCard img={lamp} />
+              <ProductCard img={lamp} />
+            </div>
+            <IconBtn value='load more products' styling='bestseller-products-btn' />
           </section>
         </FeaturedProduct>
 
-      <FeaturedProduct category='best services'>
+      <FeaturedProduct title='featured products' category='best services'>
         <section className='best-services'>
           <div className="best-services-card">
             <ServiceCard {...SERVICECARD_DETAILS[0]} />
@@ -58,13 +55,11 @@ const ShopPage = () => {
 
       <FeaturedPosts>
         <section className=" featured-posts-section">
-
           <div className="featured-posts-card">
             <PostCard />
             <PostCard />
             <PostCard />
           </div>
-         
         </section>
       </FeaturedPosts>
 

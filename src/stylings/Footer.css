@@ -78,7 +78,71 @@
     font-size: .9rem;
 }
 
+.getInTouch-btn:hover {
+    background: white;
+    color: #23A6F0;
+    border: 1px solid #23A6F0;
+}
+
 .footer-bottom {
     padding: 2.2rem 10rem;
     font-size: .875rem;
+}
+
+ 
+        /* MOBILE DESIGN FOR FOOTER*/
+@media screen and (max-width: 768px) { 
+    .footer-top {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 3rem 3.5rem;
+    }
+
+    .footer-top h3 {
+        font-size: 1.8rem;
+    }
+
+    .footer-center {
+        grid-template-columns: none;
+        padding: 4rem 3.5rem;
+        gap: 3rem;
+    }
+
+    .footer-center h4 {
+        font-size: 1.3rem;
+    }
+
+    .footer-center ul > li {
+        font-size: 1.1rem;
+    }
+
+    .input-box > input {
+        padding: 1.5rem;
+        width: 65%;
+    }
+
+    .input-box > input::placeholder {
+        font-size: 1.05rem;
+    }
+
+    .getInTouch-btn {
+        width: 35%;
+        padding: 1.5rem;
+        font-size: 1rem;
+        text-align:center;
+    }
+
+    .footer-center > ul:nth-of-type(5) > p {
+        font-weight: 500;
+        font-size: 1.05rem;
+        margin-top: 0;
+    }
+    
+    .footer-bottom {
+        padding: 2.3rem 7rem;
+        font-size: 1.1rem;
+        line-height: 1.9;
+        text-align: center;
+    }
 }

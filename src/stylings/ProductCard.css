@@ -39,3 +39,14 @@
 .new-price {
     color: #23856D;
 }
+
+@media screen and (max-width: 768px) {
+    .product-card-image {
+        width: 16.5rem;
+        height: 20.5rem;
+    }
+
+    .product-card > h5 {
+       margin-top: 1rem;
+    }
+}

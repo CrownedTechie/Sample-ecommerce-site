@@ -41,7 +41,7 @@ const Footer = () => {
                         <button className='getInTouch-btn'>Subscribe</button>
                     </div>
 
-                    <p>Lorem, ipsum dolor sit amet</p>
+                    <p>Lore imp sum dolor Amit</p>
                 </ul>
               </div>
 

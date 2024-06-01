@@ -24,6 +24,11 @@
     font-weight: 700;
 }
 
+.bestseller-products-btn:hover {
+    color: white;
+    background: #23A6F0;
+}
+
 
         /* BEST SERVICES (FEATURED-PRODUCTS SECTION) */
 .best-services {
@@ -52,4 +57,44 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.25rem;
+}
+
+
+
+        /* MOBILE DESIGNS */
+@media screen and (max-width: 768px) {
+        /* BESTSELLERS PRODUCTS MOBILE DESIGN */
+    .bestseller-title h4 {
+        display: none;
+    }
+
+    .bestseller-products {
+        padding: 0 2rem;
+    }
+    
+    .bestseller-products-cards {
+        grid-template-columns: none;
+        padding: 3.5rem 0;
+        gap: 3.8rem;
+    }
+
+    .bestseller-products-btn {
+        font-size: .8rem;
+    }
+
+
+        /* MOBILE DESIGN FOR BEST SERVICES */
+    .best-services {
+       margin: 4rem 0;
+    }
+  
+    .best-services-card {
+        grid-template-columns: none;
+    }
+
+
+        /* MOBILE DESIGN FOR FEATURED POSTS */
+    .featured-posts-card {
+        grid-template-columns: none;
+    }
 }

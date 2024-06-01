@@ -6,9 +6,7 @@
     background: url('../assets/background.png');
     background-repeat: no-repeat;
     height: 40rem;
-    padding-top: 10rem;
-    padding-left: 10rem;
-    padding-right: 10rem;
+    padding: 10rem;
     gap: 2rem;
     text-align: center;
 }
@@ -28,11 +26,16 @@
     padding: 0 15rem;
 }
 
+.CallToAction-heading > div {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 .CallToAction-heading p {
     color: #737373;
     padding: 0 15rem;
     font-size: 1.2rem;
-
 }
 
 .CallToAction-heading h3 {
@@ -46,4 +49,48 @@
     border-radius: 0.3125rem;
     text-transform: uppercase;
     color: white;
+}
+
+.CallToAction-btn:hover {
+    background: white;
+    color: #23A6F0;
+}
+
+
+        /* MOBILE DESIGN FOR CALL-TO-ACTION */
+@media screen and (max-width: 768px) {
+    .CallToAction-heading {
+        height: 45rem;
+    }
+
+    .CallToAction-heading, .CallToAction-heading h2, .CallToAction-heading p{
+        padding: 0;
+    }
+
+    .CallToAction-heading h6 {
+        margin-top: 3rem;
+    }
+
+    .CallToAction-heading h2 {
+        padding: 0 3rem;
+        letter-spacing: .1rem;
+        text-align: center;
+        line-height: 1.1;
+    }
+
+    .CallToAction-heading > div {
+        flex-direction: column-reverse;
+        margin: 1rem 0;
+    }
+
+    .CallToAction-heading p {
+        font-size: 1.05rem;
+        font-weight: 600;
+        padding: 0 4rem;
+        line-height: 1.6;
+    }
+
+    .CallToAction-heading h3 {
+        font-size: 1.8rem;
+    }
 }
