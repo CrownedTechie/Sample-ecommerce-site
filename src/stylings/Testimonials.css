@@ -7,6 +7,7 @@
     justify-items: center;
     gap: 9rem;
     background: #FAFAFA;
+    margin-bottom: 0;
 }
 
 .testimonials-review {
@@ -74,5 +75,6 @@
 
     .testimonials-gallery {
         padding: 0 2.8rem;
+        gap: .8rem;
     }
 }
