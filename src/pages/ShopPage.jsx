@@ -26,23 +26,20 @@ const ShopPage = () => {
       
         <FeaturedProduct title='featured products' category='bestseller products' extraClass='bestseller-title' >
           <section className="bestseller-products">
-
-        {/* REDUNDANT. WILL BE ADJUSTED LATER */}
-          <div className="bestseller-products-cards">
-            <ProductCard img={lamp} />
-            <ProductCard img={lamp} />
-            <ProductCard img={lamp} />
-            <ProductCard img={lamp} />
-            <ProductCard img={lamp} />
-            <ProductCard img={lamp} />
-            <ProductCard img={lamp} />
-            <ProductCard img={lamp} />
-            <ProductCard img={lamp} />
-            <ProductCard img={lamp} />
-          </div>
-
-          <IconBtn value='load more products' styling='bestseller-products-btn' />
-           
+          {/* REDUNDANT. WILL BE ADJUSTED LATER */}
+            <div className="bestseller-products-cards">
+              <ProductCard img={lamp} />
+              <ProductCard img={lamp} />
+              <ProductCard img={lamp} />
+              <ProductCard img={lamp} />
+              <ProductCard img={lamp} />
+              <ProductCard img={lamp} />
+              <ProductCard img={lamp} />
+              <ProductCard img={lamp} />
+              <ProductCard img={lamp} />
+              <ProductCard img={lamp} />
+            </div>
+            <IconBtn value='load more products' styling='bestseller-products-btn' />
           </section>
         </FeaturedProduct>
 
@@ -58,13 +55,11 @@ const ShopPage = () => {
 
       <FeaturedPosts>
         <section className=" featured-posts-section">
-
           <div className="featured-posts-card">
             <PostCard />
             <PostCard />
             <PostCard />
           </div>
-         
         </section>
       </FeaturedPosts>
 
