@@ -3,7 +3,6 @@ import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
 import FeaturedProduct from "../components/FeaturedProduct";
 import ProductCard from "../components/ProductCard";
-import lamp from '../assets/graphic-design1.png';
 import IconBtn from "../components/IconBtn";
 import ServiceCard from "../components/ServiceCard";
 import { SERVICECARD_DETAILS } from "../data";
@@ -13,64 +12,82 @@ import Testimonials from "../components/Testimonials";
 import CallToAction from "../components/CallToAction";
 import Footer from "../components/Footer";
 import '../stylings/ShopPage.css';
-
+import { useGetProductsQuery } from "../api/Products";
 
 const ShopPage = () => {
-  return (
+  const { data, error, isLoading } = useGetProductsQuery();
+
+  if (isLoading) {
+    return <h1>...Loading</h1>
+  }
+
+  if (error) {
+    return <h1>na error be this</h1>
+  }
+  
+  if (data !== undefined) {
+    const { products } = data;
+
+    console.log(products);
+
+    return (
       <>
         <AlertHeader />
-      
+
         <Header />
-      
+
         <HeroSection />
-      
-        <FeaturedProduct title='featured products' category='bestseller products' extraClass='bestseller-title' >
+
+        <FeaturedProduct title='featured products' category='bestseller products' extraClass='bestseller-title'>
           <section className="bestseller-products">
-          {/* REDUNDANT. WILL BE ADJUSTED LATER */}
             <div className="bestseller-products-cards">
-              <ProductCard img={lamp} />
-              <ProductCard img={lamp} />
-              <ProductCard img={lamp} />
-              <ProductCard img={lamp} />
-              <ProductCard img={lamp} />
-              <ProductCard img={lamp} />
-              <ProductCard img={lamp} />
-              <ProductCard img={lamp} />
-              <ProductCard img={lamp} />
-              <ProductCard img={lamp} />
+              {Array.isArray(products) && products.map((product) => (
+                <ProductCard 
+                  img={product.images[0]}
+                  key={product.id}
+                  title={product.title}
+                  category={product.category}
+                  oldPrice={product.price}
+                  discountedPrice={product.discountPercentage}
+                />
+              ))}
             </div>
-            <IconBtn value='load more products' styling='bestseller-products-btn' />
+            <IconBtn
+              value='load more products'
+              styling='bestseller-products-btn' />
           </section>
         </FeaturedProduct>
 
-      <FeaturedProduct title='featured products' category='best services'>
-        <section className='best-services'>
-          <div className="best-services-card">
-            <ServiceCard {...SERVICECARD_DETAILS[0]} />
-            <ServiceCard {...SERVICECARD_DETAILS[1]} />
-            <ServiceCard {...SERVICECARD_DETAILS[2]} />
-          </div>
-        </section>
-      </FeaturedProduct>
+        <FeaturedProduct title='featured products' category='best services'>
+          <section className='best-services'>
+            <div className="best-services-card">
+              <ServiceCard {...SERVICECARD_DETAILS[0]} />
+              <ServiceCard {...SERVICECARD_DETAILS[1]} />
+              <ServiceCard {...SERVICECARD_DETAILS[2]} />
+            </div>
+          </section>
+        </FeaturedProduct>
 
-      <FeaturedPosts>
-        <section className=" featured-posts-section">
-          <div className="featured-posts-card">
-            <PostCard />
-            <PostCard />
-            <PostCard />
-          </div>
-        </section>
-      </FeaturedPosts>
+        <FeaturedPosts>
+          <section className="featured-posts-section">
+            <div className="featured-posts-card">
+              <PostCard />
+              <PostCard />
+              <PostCard />
+            </div>
+          </section>
+        </FeaturedPosts>
 
-      <Testimonials />
+        <Testimonials />
 
-      <CallToAction />
+        <CallToAction />
 
-      <Footer />
+        <Footer />
+      </>
+    )
+  }
 
-    </>
-  )
+  return null;
 }
 
 export default ShopPage;

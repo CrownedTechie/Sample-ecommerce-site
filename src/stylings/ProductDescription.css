@@ -1,0 +1,51 @@
+.productdescription-section {
+    padding: 2rem 0rem;
+}
+
+.productdescription-section menu {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 4rem;
+}
+
+.productdescription-section menu button {
+    text-transform: capitalize;
+    cursor: pointer;
+    color: #737373;
+    font-weight: 600;
+}
+
+.productdescription-section article {
+    padding: 3rem 8rem;
+}
+
+.extraContent-col {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5rem;
+}
+
+.extra-content {
+    color: #737373;
+    padding: 0 5rem;
+}
+
+.extra-content h3 {
+    font-weight: 700;
+    font-size: 24px;
+    color: #252B42;
+    margin-bottom: 2rem;
+}
+
+.extra-content blockquote {
+    border-left: 3px solid #23856d;
+    margin: 1.5em 2px;
+    padding: 0.5em 10px;
+}
+
+.extraContent-img {
+    width: 26rem;
+    height: 23.25rem;
+    border-radius: 9px;
+}

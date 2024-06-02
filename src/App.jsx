@@ -1,11 +1,20 @@
 import ShopPage from './pages/ShopPage';
+import ProductDetailsPage from './pages/ProductDetailsPage';
+import { Routes, Route } from 'react-router-dom';
 
 
 function App() {
 
   return (
     <>
-      <ShopPage />
+      
+      <Routes>
+        <Route path='/' element={<ShopPage />} />
+        <Route path='/productdetails' element={<ProductDetailsPage />}  />
+      </Routes>
+
+    
+
     </>
   )
 }
