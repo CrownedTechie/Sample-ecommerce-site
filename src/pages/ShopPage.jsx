@@ -3,7 +3,6 @@ import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
 import FeaturedProduct from "../components/FeaturedProduct";
 import ProductCard from "../components/ProductCard";
-import lamp from '../assets/graphic-design1.png';
 import IconBtn from "../components/IconBtn";
 import ServiceCard from "../components/ServiceCard";
 import { SERVICECARD_DETAILS } from "../data";
