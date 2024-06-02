@@ -35,3 +35,20 @@
     width: 15rem;
     height: 17.5rem;
 }
+
+
+.logos-section {
+    background: #FAFAFA;
+    padding: 4rem 12.5rem;
+}
+
+.logos-section > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logos-section > div img {
+    width: 6.5rem;
+    height: 4.5rem;
+}

@@ -7,6 +7,7 @@ import ProductCard from "../components/ProductCard";
 import lamp from "../assets/graphic-design1.png";
 import { LOGOS } from "../data";
 import DisplayImg from "../components/DisplayImg";
+import Footer from "../components/Footer";
 
 const ProductDetailsPage = () => {
   return (
@@ -39,15 +40,15 @@ const ProductDetailsPage = () => {
         
       </section>
 
-      <section>
-        <div>
+      <section className="logos-section">
           <div>
               {LOGOS.map((logo, index) => (
                 <DisplayImg img={logo} key={index} />
               ))}
             </div>
-        </div> 
       </section>
+
+      <Footer />
 
     </>
   )
