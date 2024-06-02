@@ -33,7 +33,7 @@
         /* BEST SERVICES (FEATURED-PRODUCTS SECTION) */
 .best-services {
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     align-items: center;
     margin-left: 9rem;
     margin-right: 9rem;
