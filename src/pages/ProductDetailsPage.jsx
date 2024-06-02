@@ -2,7 +2,12 @@
 
 const ProductDetailsPage = () => {
   return (
-    <div>ProductDetailsPage</div>
+    <>
+      <AlertHeader />
+
+      
+
+    </>
   )
 }
 
