@@ -47,7 +47,7 @@ const SingleProduct = ({img, title, price, availabilityStatus, NoOfReviews, desc
                             <div className="singleproducts-btns">
                                 <IconBtn value='Select Options' styling='options-btn' />
                                 <IconBtn icon='favorite' iconStyling='circle-icon' />
-                                <IconBtn icon='shopping_cart' iconStyling='circle-icon' />
+                               <Link to={'/shoppingcart'}><IconBtn icon='shopping_cart' iconStyling='circle-icon'  /></Link>
                                 <IconBtn icon='visibility' iconStyling='circle-icon' />
                             </div>
                         </div>
