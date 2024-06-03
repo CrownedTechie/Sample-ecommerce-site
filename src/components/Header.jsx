@@ -2,6 +2,7 @@ import '../stylings/Header.css';
 import IconBtn from './IconBtn';
 import { NAV_LINKS_DESKTOP, NAV_LINKS_MOBILE } from '../data';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,8 +24,10 @@ const Header = () => {
                     </ul>
 
                     { isMenuOpen && (<ul className="nav-links-mobile">
-                            {NAV_LINKS_MOBILE.map((link, index) => (
-                                <li key={index}>{ link }</li>
+                            {NAV_LINKS_MOBILE.map((link) => (
+                                <li key={link.id}>
+                                    <Link to={link.link}>{ link.name }</Link>
+                                </li>
                             ))}
                     </ul>)}
                 </nav>

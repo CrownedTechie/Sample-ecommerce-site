@@ -1,9 +1,7 @@
 import '../stylings/AlertHeader.css';
 import IconBtn from './IconBtn';
-import instagram from '../assets/instagram.png';
-import youtube from '../assets/youtube.png';
-import facebook from '../assets/facebook.png';
-import twitter from '../assets/twitter.png';
+import { SOCIALS } from '../data';
+import DisplayImg from './DisplayImg';
 
 
 const AlertHeader = () => {
@@ -21,10 +19,9 @@ const AlertHeader = () => {
         <div className="follow-us">
           Follow Us :
           <div className="socials">
-            <img src={instagram} alt="" />
-            <img src={youtube} alt="" />
-            <img src={facebook} alt="" />
-            <img src={twitter} alt="" />
+            {SOCIALS.map((social, index) => (
+              <DisplayImg img={social} key={index}/>
+            ))}
           </div>
         </div>
 

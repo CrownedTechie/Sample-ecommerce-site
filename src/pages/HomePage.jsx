@@ -12,82 +12,93 @@ import Testimonials from "../components/Testimonials";
 import CallToAction from "../components/CallToAction";
 import Footer from "../components/Footer";
 import '../stylings/HomePage.css';
-import { useGetProductsQuery } from "../api/Products";
+import { useGetProductsQuery, useGetHomeDecorQuery } from "../api/Products";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
-const ShopPage = () => {
-  const { data, error, isLoading } = useGetProductsQuery();
+const HomePage = () => {
+  const [limit, setLimit] = useState(10);
 
-  if (isLoading) {
-    return <h1>...Loading</h1>
-  }
+  const loadMoreProducts = () => {
+    if (limit < 30) {
+      setLimit((prevLimit) => Math.min(prevLimit + 5, 30));
+    }
+  };
 
-  if (error) {
-    return <h1>na error be this</h1>
-  }
+
+  const { data: allProducts, error: allProductsError, isLoading: allProductsLoading } = useGetProductsQuery({ limit });
   
-  if (data !== undefined) {
-    const { products } = data;
+  const { data: homeDecor, error: homeDecorError, isLoading: homeDecorLoading } = useGetHomeDecorQuery();
 
-    console.log(products);
+  // console.log(homeDecor);
+  
+  if (allProductsLoading || homeDecorLoading) {
+    return <h1>...Loading</h1>;
+  }
 
-    return (
-      <>
-        <AlertHeader />
+  if (allProductsError || homeDecorError) {
+    return <h1>na error be this</h1>;
+  }
+  const { products } = allProducts;
+    
+  return (
+    <>
+      <AlertHeader />
 
-        <Header />
+      <Header />
 
-        <HeroSection />
+      <HeroSection />
 
-        <FeaturedProduct title='featured products' category='bestseller products' extraClass='bestseller-title'>
-          <section className="bestseller-products">
-            <div className="bestseller-products-cards">
-              {Array.isArray(products) && products.map((product) => (
-                <ProductCard 
-                  img={product.images[0]}
-                  key={product.id}
+      <FeaturedProduct title='featured products' category='bestseller products' extraClass='bestseller-title'>
+        <section className="bestseller-products">
+          <div className="bestseller-products-cards">
+            {Array.isArray(products) && products.map((product) => (
+              <Link to={`/product/${product.id}`} key={product.id} >
+                <ProductCard
+                  img={product.thumbnail}
                   title={product.title}
                   category={product.category}
                   oldPrice={product.price}
                   discountedPrice={product.discountPercentage}
                 />
-              ))}
-            </div>
-            <IconBtn
-              value='load more products'
-              styling='bestseller-products-btn' />
-          </section>
-        </FeaturedProduct>
+              </Link>
+               
+            ))}
+          </div>
 
-        <FeaturedProduct title='featured products' category='best services'>
-          <section className='best-services'>
-            <div className="best-services-card">
-              <ServiceCard {...SERVICECARD_DETAILS[0]} />
-              <ServiceCard {...SERVICECARD_DETAILS[1]} />
-              <ServiceCard {...SERVICECARD_DETAILS[2]} />
-            </div>
-          </section>
-        </FeaturedProduct>
+          {limit < 30 && <IconBtn value='load more products' styling='bestseller-products-btn' btnClick={loadMoreProducts} />}
+        </section>
+      </FeaturedProduct>
 
-        <FeaturedPosts>
-          <section className="featured-posts-section">
-            <div className="featured-posts-card">
-              <PostCard />
-              <PostCard />
-              <PostCard />
-            </div>
-          </section>
-        </FeaturedPosts>
+      <FeaturedProduct title='featured products' category='best services'>
+        <section className='best-services'>
+          <div className="best-services-card">
+            {SERVICECARD_DETAILS.map((detail) => (
+              <ServiceCard img={detail.img} title={detail.title} text={detail.text} key={detail.id} />
+            ))}
+          </div>
+        </section>
+      </FeaturedProduct>
 
-        <Testimonials />
+      <FeaturedPosts>
+        <section className="featured-posts-section">
+          <div className="featured-posts-card">
+            {Array.isArray(homeDecor.products) && homeDecor.products.map((decor) => (
+              <Link to={`/product/${decor.id}`} key={decor.id} >
+                <PostCard img={decor.thumbnail} title={decor.title} description={decor.description} />
+              </Link>
+            ))}
+          </div>
+        </section>
+      </FeaturedPosts>
 
-        <CallToAction />
+      <Testimonials />
 
-        <Footer />
-      </>
-    )
-  }
+      <CallToAction />
 
-  return null;
-}
+      <Footer />
+    </>
+  )
+};
 
-export default ShopPage;
+export default HomePage;

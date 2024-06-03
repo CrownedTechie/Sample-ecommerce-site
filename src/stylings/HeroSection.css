@@ -10,7 +10,7 @@
 
 
     /* MOBILE DESIGN */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     .hero-images {
         grid-auto-flow: row;
         gap: 1rem;
@@ -23,7 +23,7 @@
     }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 901px) {
     .hero-images {
         grid-template-rows: repeat(2, minmax(0, 1fr));
         grid-auto-flow: column;

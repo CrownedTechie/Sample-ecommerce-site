@@ -5,12 +5,18 @@ export const productsApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: 'https://dummyjson.com/' }),
   endpoints: (builder) => ({
     getProducts: builder.query({
-      query: () => 'products?limit=10',
+      query: ({limit}) => `products?limit=${limit}`,
+    }),
+    getHomeDecor: builder.query({
+      query: () => 'products/category/home-decoration?limit=3',
+    }),
+    getSingleProduct: builder.query({
+      query: (id) => `products/${id}`,
     }),
     getProductCategory: builder.query({
-      query: () => 'home-decoration'
+      query: (categoryType) => `products/category/${categoryType}`
+    }),
     })
-  }),
 });
 
-export const { useGetProductsQuery, useGetProductCategoryQuery } = productsApi;
+export const { useGetProductsQuery, useGetHomeDecorQuery, useGetSingleProductQuery, useGetProductCategoryQuery } = productsApi;

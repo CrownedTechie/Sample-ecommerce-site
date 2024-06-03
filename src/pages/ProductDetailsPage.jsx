@@ -8,37 +8,79 @@ import lamp from "../assets/graphic-design1.png";
 import { LOGOS } from "../data";
 import DisplayImg from "../components/DisplayImg";
 import Footer from "../components/Footer";
+import { useParams } from 'react-router-dom';
+import { useGetSingleProductQuery, useGetProductsQuery, useGetProductCategoryQuery } from "../api/Products";
+import { useState, useEffect } from "react";
+
+
 
 const ProductDetailsPage = () => {
+
+  const { productId } = useParams();
+  const [category, setCategory] = useState(null);
+
+  const { data: product, error: productError, isLoading: productLoading } = useGetSingleProductQuery(productId);
+
+  useEffect(() => {
+    if (product && product.category) {
+      setCategory(product.category);
+    }
+  }, [product]);
+
+  const { data: categoryData, error: categoryDataError, isLoading: categoryDataLoading} = useGetProductCategoryQuery(category);
+
+  if (productLoading || categoryDataLoading) return <div>Loading...</div>;
+  if (productError || categoryDataError) return <div>Error: {productError?.message || categoryDataError?.message}</div>;
+
+  // console.log(categoryData)
+  // console.log(product)
+
   return (
     <>
       <AlertHeader />
 
       <Header />
 
-      <SingleProduct />
+      {product && (
+        <>
+          <SingleProduct
+            img={product.images[0]}
+            title={product.title}
+            price={product.price}
+            availabilityStatus={product.availabilityStatus}
+            NoOfReviews={product.reviews.length}
+            description={product.description}
+          />
+          <ProductDescription
+            noOfReviews={product.reviews.length}
+            img={product.images[1]}
+            brand={product.brand}
+            description={product.description}
+            category={product.category}
+          />
+        </>
+      )}
 
-      <ProductDescription />
+        <section className="bestsellerProducts-section">
+          <h3>bestseller products</h3>
+          <hr />
 
-      <section className="bestsellerProducts-section">
-        <h3>bestseller products</h3>
-        <hr />
-
-        <div>
-          {/* REDUNDANT. WILL BE CHANGED LATER */}
           <div>
-            <ProductCard img={lamp} title='lorem have' />
-            <ProductCard img={lamp} title='lorem have' />
-            <ProductCard img={lamp} title='lorem have' />
-            <ProductCard img={lamp} title='lorem have' />
-            <ProductCard img={lamp} title='lorem have' />
-            <ProductCard img={lamp} title='lorem have' />
-            <ProductCard img={lamp} title='lorem have' />
-            <ProductCard img={lamp} title='lorem have' />
+            <div>
+              {categoryData && Array.isArray(categoryData.products) && categoryData.products.map((product) => (
+                <ProductCard
+                  key={product.id}
+                  img={product.images[0]}
+                  title={product.title}
+                  brand={product.brand}
+                  category={product.category}
+                  oldPrice={product.price}
+                  discountedPrice={product.discountPercentage}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        
-      </section>
+        </section>
 
       <section className="logos-section">
           <div>
