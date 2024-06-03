@@ -36,6 +36,8 @@ const SingleProduct = () => {
 
                         <h6>availability: <span> in stock</span></h6>
 
+                        <p>Met minim Mollie non desert Alamo est sit cliquey dolor do met sent. RELIT official consequent door ENIM RELIT Mollie. Excitation venial consequent sent nostrum met.</p>
+
                         <hr />
 
 

@@ -25,12 +25,6 @@
   align-items: center;
 }
 
-@media screen and (max-width: 768px) {
-  .header-alert {
-    display: none;
-  }
-}
-
 .contact-us {
   display: flex;
   gap: 1.5rem;
@@ -51,4 +45,12 @@
   width: 1.125rem;
   height: 1.125rem;
   cursor: pointer;
+}
+
+
+    /* MOBILE DESIGN */
+@media screen and (max-width: 900px) {
+  .header-alert {
+    display: none;
+  }
 }
