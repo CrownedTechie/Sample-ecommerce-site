@@ -11,7 +11,7 @@ import PostCard from "../components/PostCard";
 import Testimonials from "../components/Testimonials";
 import CallToAction from "../components/CallToAction";
 import Footer from "../components/Footer";
-import '../stylings/ShopPage.css';
+import '../stylings/HomePage.css';
 import { useGetProductsQuery } from "../api/Products";
 
 const ShopPage = () => {

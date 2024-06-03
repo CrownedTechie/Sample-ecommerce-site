@@ -1,4 +1,4 @@
-import ShopPage from './pages/ShopPage';
+import HomePage from './pages/HomePage';
 import ProductDetailsPage from './pages/ProductDetailsPage';
 import { Routes, Route } from 'react-router-dom';
 
@@ -9,7 +9,7 @@ function App() {
     <>
       
       <Routes>
-        <Route path='/' element={<ShopPage />} />
+        <Route path='/' element={<HomePage />} />
         <Route path='/productdetails' element={<ProductDetailsPage />}  />
       </Routes>
 

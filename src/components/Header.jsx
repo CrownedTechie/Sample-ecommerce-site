@@ -1,9 +1,14 @@
 import '../stylings/Header.css';
 import IconBtn from './IconBtn';
 import { NAV_LINKS_DESKTOP, NAV_LINKS_MOBILE } from '../data';
-
+import { useState } from 'react';
 
 const Header = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
 
     return (
         <>
@@ -17,11 +22,11 @@ const Header = () => {
                         ))}
                     </ul>
 
-                    <ul className="nav-links-mobile">
-                        {NAV_LINKS_MOBILE.map((link, index) => (
-                            <li key={index}>{ link }</li>
-                        ))}
-                    </ul>
+                    { isMenuOpen && (<ul className="nav-links-mobile">
+                            {NAV_LINKS_MOBILE.map((link, index) => (
+                                <li key={index}>{ link }</li>
+                            ))}
+                    </ul>)}
                 </nav>
 
                 <div className='header-btns'>
@@ -29,7 +34,7 @@ const Header = () => {
                     <IconBtn icon='search' styling='iconBtn-search' />
                     <IconBtn icon='shopping_cart' styling='iconBtn-shoppingCart' />
                     <IconBtn icon='favorite' btnBoxStyling='iconBtn-favorite' />
-                    <IconBtn icon='menu' btnBoxStyling='iconBtn-menu' />
+                    <IconBtn icon={isMenuOpen ? 'menu_open' : 'menu'} btnBoxStyling='iconBtn-menu' iconClick={toggleMenu} />
                 </div>
             </header>
            
