@@ -3,11 +3,11 @@ import DisplayImg from "./DisplayImg";
 import post1 from "../assets/post1.png";
 import '../stylings/PostCard.css';
 
-const PostCard = () => {
+const PostCard = ({img, title, description}) => {
   return (
         <>
           <article className="post-card">
-              <DisplayImg  img={post1} />
+              <DisplayImg  img={img} />
 
               <div className="post-card-content">
                 <menu>
@@ -16,9 +16,9 @@ const PostCard = () => {
                       <button>New</button>
                 </menu>
                   
-                <h4 className="post-title">Loudest à la Madison #1 (L'integral)</h4>
+                <h4 className="post-title">{ title }</h4>
 
-                <p className="post-description">We focus on ergonomics and meeting you where you work. It's only a keystroke away.</p>
+                <p className="post-description">{ description }</p>
                   
                 <div className="post-details">
                     <IconBtn icon='alarm' value='22 April, 2022' />

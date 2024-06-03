@@ -12,24 +12,25 @@ import Testimonials from "../components/Testimonials";
 import CallToAction from "../components/CallToAction";
 import Footer from "../components/Footer";
 import '../stylings/HomePage.css';
-import { useGetProductsQuery } from "../api/Products";
+import { useGetProductsQuery, useGetProductCategoryQuery } from "../api/Products";
+import { useState } from "react";
 
 const ShopPage = () => {
-  const { data, error, isLoading } = useGetProductsQuery();
+  const [limit, setLimit] = useState(10);
 
-  if (isLoading) {
-    return <h1>...Loading</h1>
-  }
-
-  if (error) {
-    return <h1>na error be this</h1>
-  }
+  const { data: allProducts, error: allProductsError, isLoading: allProductsLoading } = useGetProductsQuery({ limit });
   
-  if (data !== undefined) {
-    const { products } = data;
+  const { data: homeDecor, error: homeDecorError, isLoading: homeDecorLoading } = useGetProductCategoryQuery();
 
-    console.log(products);
+  console.log(homeDecor);
+  
+  if (allProductsLoading) {return <h1>...Loading</h1>}
 
+  if (allProductsError) {return <h1>na error be this</h1>}
+  
+  if (allProducts !== undefined) {
+    const { products } = allProducts;
+    
     return (
       <>
         <AlertHeader />
@@ -52,18 +53,16 @@ const ShopPage = () => {
                 />
               ))}
             </div>
-            <IconBtn
-              value='load more products'
-              styling='bestseller-products-btn' />
+            <IconBtn value='load more products' styling='bestseller-products-btn' />
           </section>
         </FeaturedProduct>
 
         <FeaturedProduct title='featured products' category='best services'>
           <section className='best-services'>
             <div className="best-services-card">
-              <ServiceCard {...SERVICECARD_DETAILS[0]} />
-              <ServiceCard {...SERVICECARD_DETAILS[1]} />
-              <ServiceCard {...SERVICECARD_DETAILS[2]} />
+              {SERVICECARD_DETAILS.map((detail) => (
+                <ServiceCard img={detail.img} title={detail.title} text={detail.text} key={detail.id} />
+              ))}
             </div>
           </section>
         </FeaturedProduct>
@@ -71,9 +70,9 @@ const ShopPage = () => {
         <FeaturedPosts>
           <section className="featured-posts-section">
             <div className="featured-posts-card">
-              <PostCard />
-              <PostCard />
-              <PostCard />
+              {Array.isArray(homeDecor.products) && homeDecor.products.map((decor) => (
+                <PostCard img={decor.images[0]} title={ decor.title } description={ decor.description } />
+              ))}
             </div>
           </section>
         </FeaturedPosts>

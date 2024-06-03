@@ -7,29 +7,36 @@ import piperHat from "./assets/logo3.png";
 import stripe from "./assets/logo4.png";
 import aws from "./assets/logo5.png";
 import reddit from "./assets/logo6.png";
+import instagram from './assets/instagram.png';
+import youtube from './assets/youtube.png';
+import facebook from './assets/facebook.png';
+import twitter from './assets/twitter.png';
 
 
-
+export const SOCIALS = [instagram, youtube, facebook, twitter];
 
 export const NAV_LINKS_DESKTOP = ['Home', 'Shop', 'About', 'Blog', 'Contact', 'Pages'];
 
 export const NAV_LINKS_MOBILE = ['Home', 'product', 'pricing', 'Contact'];
 
-export const LOGOS = [ hooli, lyft, piperHat, stripe, aws, reddit ];
+export const LOGOS = [hooli, lyft, piperHat, stripe, aws, reddit];
 
 
 export const SERVICECARD_DETAILS = [
     {
+        id: 1,
         img: bookReader,
         title:'Easy Wins',
         text:'Get your best looking smile now!'
     },
     {
+        id:2 ,
         img: twoPager,
         title:'Concrete',
         text:'Defalcate is most focused in helping you discover your most beautiful smile'
     },
     {
+        id: 3,
         img: trendingUp,
         title:'Hack Growth',
         text:'Overcame any hurdle or any other problem.'

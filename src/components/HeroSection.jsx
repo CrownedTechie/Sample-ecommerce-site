@@ -10,12 +10,12 @@ const HeroSection = () => {
       <>
           <section className='hero-section'>
 
-            <div className='hero-images'>
-              <DisplayImg img={furniture1} />
-              <DisplayImg img={furniture2} />
-              <DisplayImg img={furniture3} />
-              <DisplayImg img={furniture4} />
-            </div>
+        <div className='hero-images'>
+            <DisplayImg img={furniture1} />
+            <DisplayImg img={furniture2} />
+            <DisplayImg img={furniture3} />
+            <DisplayImg img={furniture4} />
+          </div>
             
         </section>
       </>
