@@ -16,7 +16,7 @@ import { useGetProductsQuery, useGetHomeDecorQuery } from "../api/Products";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const ShopPage = () => {
+const HomePage = () => {
   const [limit, setLimit] = useState(10);
 
   const loadMoreProducts = () => {
@@ -30,76 +30,75 @@ const ShopPage = () => {
   
   const { data: homeDecor, error: homeDecorError, isLoading: homeDecorLoading } = useGetHomeDecorQuery();
 
-  console.log(homeDecor);
+  // console.log(homeDecor);
   
-  if (allProductsLoading) {return <h1>...Loading</h1>}
-
-  if (allProductsError) {return <h1>na error be this</h1>}
-  
-  if (allProducts !== undefined) {
-    const { products } = allProducts;
-    
-    return (
-      <>
-        <AlertHeader />
-
-        <Header />
-
-        <HeroSection />
-
-        <FeaturedProduct title='featured products' category='bestseller products' extraClass='bestseller-title'>
-          <section className="bestseller-products">
-            <div className="bestseller-products-cards">
-              {Array.isArray(products) && products.map((product) => (
-                <Link to={`/product/${product.id}`}  key={product.id} >
-                  <ProductCard 
-                    img={product.thumbnail}
-                    title={product.title}
-                    category={product.category}
-                    oldPrice={product.price}
-                    discountedPrice={product.discountPercentage}
-                  />
-                </Link>
-               
-              ))}
-            </div>
-
-           { limit < 30 && <IconBtn value='load more products' styling='bestseller-products-btn' btnClick={loadMoreProducts} />}
-          </section>
-        </FeaturedProduct>
-
-        <FeaturedProduct title='featured products' category='best services'>
-          <section className='best-services'>
-            <div className="best-services-card">
-              {SERVICECARD_DETAILS.map((detail) => (
-                <ServiceCard img={detail.img} title={detail.title} text={detail.text} key={detail.id} />
-              ))}
-            </div>
-          </section>
-        </FeaturedProduct>
-
-        <FeaturedPosts>
-          <section className="featured-posts-section">
-            <div className="featured-posts-card">
-              {Array.isArray(homeDecor.products) && homeDecor.products.map((decor) => (
-                  <Link to={`/product/${decor.id}`}  key={decor.id} >
-                    <PostCard img={decor.thumbnail} title={ decor.title } description={ decor.description } />
-                  </Link>
-              ))}
-            </div>
-          </section>
-        </FeaturedPosts>
-
-        <Testimonials />
-
-        <CallToAction />
-
-        <Footer />
-      </>
-    )
+  if (allProductsLoading || homeDecorLoading) {
+    return <h1>...Loading</h1>;
   }
 
-  return null;
-}
+  if (allProductsError || homeDecorError) {
+    return <h1>na error be this</h1>;
+  }
+  const { products } = allProducts;
+    
+  return (
+    <>
+      <AlertHeader />
 
-export default ShopPage;
+      <Header />
+
+      <HeroSection />
+
+      <FeaturedProduct title='featured products' category='bestseller products' extraClass='bestseller-title'>
+        <section className="bestseller-products">
+          <div className="bestseller-products-cards">
+            {Array.isArray(products) && products.map((product) => (
+              <Link to={`/product/${product.id}`} key={product.id} >
+                <ProductCard
+                  img={product.thumbnail}
+                  title={product.title}
+                  category={product.category}
+                  oldPrice={product.price}
+                  discountedPrice={product.discountPercentage}
+                />
+              </Link>
+               
+            ))}
+          </div>
+
+          {limit < 30 && <IconBtn value='load more products' styling='bestseller-products-btn' btnClick={loadMoreProducts} />}
+        </section>
+      </FeaturedProduct>
+
+      <FeaturedProduct title='featured products' category='best services'>
+        <section className='best-services'>
+          <div className="best-services-card">
+            {SERVICECARD_DETAILS.map((detail) => (
+              <ServiceCard img={detail.img} title={detail.title} text={detail.text} key={detail.id} />
+            ))}
+          </div>
+        </section>
+      </FeaturedProduct>
+
+      <FeaturedPosts>
+        <section className="featured-posts-section">
+          <div className="featured-posts-card">
+            {Array.isArray(homeDecor.products) && homeDecor.products.map((decor) => (
+              <Link to={`/product/${decor.id}`} key={decor.id} >
+                <PostCard img={decor.thumbnail} title={decor.title} description={decor.description} />
+              </Link>
+            ))}
+          </div>
+        </section>
+      </FeaturedPosts>
+
+      <Testimonials />
+
+      <CallToAction />
+
+      <Footer />
+    </>
+  )
+};
+
+export default HomePage;
