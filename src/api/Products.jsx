@@ -9,8 +9,12 @@ export const productsApi = createApi({
     }),
     getProductCategory: builder.query({
       query: () => 'products/category/home-decoration?limit=3',
+    }),
+    getSingleProduct: builder.query({
+      query: (id) => `products/${id}`,
+    }),
+
     })
-  }),
 });
 
-export const { useGetProductsQuery, useGetProductCategoryQuery } = productsApi;
+export const { useGetProductsQuery, useGetProductCategoryQuery, useGetSingleProductQuery } = productsApi;

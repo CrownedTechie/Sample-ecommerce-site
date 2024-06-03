@@ -14,6 +14,7 @@ import Footer from "../components/Footer";
 import '../stylings/HomePage.css';
 import { useGetProductsQuery, useGetProductCategoryQuery } from "../api/Products";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const ShopPage = () => {
   const [limit, setLimit] = useState(10);
@@ -50,14 +51,16 @@ const ShopPage = () => {
           <section className="bestseller-products">
             <div className="bestseller-products-cards">
               {Array.isArray(products) && products.map((product) => (
-                <ProductCard 
-                  img={product.images[0]}
-                  key={product.id}
-                  title={product.title}
-                  category={product.category}
-                  oldPrice={product.price}
-                  discountedPrice={product.discountPercentage}
-                />
+                <Link to={`/product/${product.id}`}  key={product.id} >
+                  <ProductCard 
+                    img={product.images[0]}
+                    title={product.title}
+                    category={product.category}
+                    oldPrice={product.price}
+                    discountedPrice={product.discountPercentage}
+                  />
+                </Link>
+               
               ))}
             </div>
 

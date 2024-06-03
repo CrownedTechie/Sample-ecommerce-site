@@ -8,19 +8,43 @@ import lamp from "../assets/graphic-design1.png";
 import { LOGOS } from "../data";
 import DisplayImg from "../components/DisplayImg";
 import Footer from "../components/Footer";
+import { useParams } from 'react-router-dom';
+import { useGetSingleProductQuery } from "../api/Products";
 
 const ProductDetailsPage = () => {
+  const { productId } = useParams();
+  
+  const { data: product, error, isLoading } = useGetSingleProductQuery(productId);
+
+  console.log(product)
+
   return (
     <>
       <AlertHeader />
 
       <Header />
 
-      <SingleProduct />
+      {product &&
+        <SingleProduct
+          img={product.images[0]}
+          title={product.title}
+          price={product.price}
+          availabilityStatus={product.availabilityStatus}
+          NoOfReviews={product.reviews.length}
+          description={product.description}
+        /> }
 
-      <ProductDescription />
+        {product
+          &&
+          <ProductDescription
+            noOfReviews={product.reviews.length}
+            img={product.images[1]}
+            brand={product.brand}
+            description={product.description}
+          />
+        }
 
-      <section className="bestsellerProducts-section">
+        <section className="bestsellerProducts-section">
         <h3>bestseller products</h3>
         <hr />
 

@@ -3,16 +3,16 @@ import stars from "../assets/stars.png";
 import productColors from "../assets/product-colors.png";
 import IconBtn from "./IconBtn";
 import '../stylings/SingleProduct.css';
-import lamp from '../assets/graphic-design1.png';
+import { Link } from "react-router-dom";
 
 
-const SingleProduct = () => {
+const SingleProduct = ({img, title, price, availabilityStatus, NoOfReviews, description}) => {
     return (
         <>
             <section className="singleproduct-section">
                 <div className="sub-header">
                     <button>
-                        <span>Home</span>
+                        <Link to={`/`}> <span>Home</span> </Link>
                         <span className="material-symbols-outlined">arrow_forward_ios</span>
                         <span className="open-page">Shop</span>
                     </button>
@@ -20,23 +20,23 @@ const SingleProduct = () => {
 
                 <article>
                     <div>
-                        <DisplayImg img={ lamp } styling='singleproduct-img' />
+                        <DisplayImg img={ img } styling='singleproduct-img' />
                     </div>
 
                     <div className="singleproduct-detail">
-                        <h4>floating phone</h4>
+                        <h4>{title}</h4>
 
                         <div className="rating">
                             <DisplayImg img={stars} />
                             
-                            <span>10 reviews</span>
+                            <span> { NoOfReviews } reviews </span>
                         </div>
 
-                        <h5>$1200</h5>
+                        <h5>${ price }</h5>
 
-                        <h6>availability: <span> in stock</span></h6>
+                        <h6>availability: <span> {availabilityStatus}</span></h6>
 
-                        <p>Met minim Mollie non desert Alamo est sit cliquey dolor do met sent. RELIT official consequent door ENIM RELIT Mollie. Excitation venial consequent sent nostrum met.</p>
+                        <p>{description}</p>
 
                         <hr />
 
