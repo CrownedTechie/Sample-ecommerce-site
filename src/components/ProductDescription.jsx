@@ -6,7 +6,7 @@ import lamp from "../assets/graphic-design1.png";
 const ProductDescription = () => {
     return (
         <>
-            <setion className="productdescription-section">
+            <section className="productdescription-section">
                 <menu>
                     <TabButton>description</TabButton>
                     <TabButton>additional information</TabButton>
@@ -30,7 +30,7 @@ const ProductDescription = () => {
                     </div>
                    
                 </article>
-            </setion>
+            </section>
         </>
     )
 }

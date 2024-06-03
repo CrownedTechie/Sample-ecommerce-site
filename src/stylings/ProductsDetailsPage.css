@@ -37,6 +37,7 @@
 }
 
 
+    /* LOGOS SECTION */
 .logos-section {
     background: #FAFAFA;
     padding: 4rem 12.5rem;
@@ -51,4 +52,21 @@
 .logos-section > div img {
     width: 6.5rem;
     height: 4.5rem;
+}
+
+
+        /* MOBILE DESIGN */
+@media screen and (max-width: 900px) {
+    .bestsellerProducts-section {
+        display: none;
+    }
+
+    .logos-section {
+        padding: 2rem;
+    }
+    
+    .logos-section > div {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
 }
