@@ -91,7 +91,7 @@
 
  
         /* MOBILE DESIGN FOR FOOTER*/
-@media screen and (max-width: 768px) { 
+@media screen and (max-width: 900px) { 
     .footer-top {
         display: flex;
         flex-direction: column;

@@ -17,7 +17,32 @@ export const SOCIALS = [instagram, youtube, facebook, twitter];
 
 export const NAV_LINKS_DESKTOP = ['Home', 'Shop', 'About', 'Blog', 'Contact', 'Pages'];
 
-export const NAV_LINKS_MOBILE = ['Home', 'product', 'pricing', 'Contact'];
+
+export const NAV_LINKS_MOBILE = [
+    {
+        id: 1,
+        name: 'Home',
+        link: '/'
+    },
+    {
+        id: 2,
+        name: 'Product',
+        link: '/product'
+    },
+    {
+        id: 3,
+        name: 'Pricing',
+        link: '/pricing'
+    },
+    {
+        id: 4,
+        name: 'Contact',
+        link: '/contact'
+    },
+]; 
+
+
+
 
 export const LOGOS = [hooli, lyft, piperHat, stripe, aws, reddit];
 
