@@ -85,6 +85,7 @@
         /* MOBILE DESIGN FOR BEST SERVICES */
     .best-services {
        margin: 4rem 0;
+       justify-content: center;
     }
   
     .best-services-card {

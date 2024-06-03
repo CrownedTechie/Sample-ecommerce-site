@@ -2,7 +2,7 @@ import '../stylings/Testimonials.css';
 import DisplayImg from './DisplayImg';
 import reviewer from '../assets/reviewer.png';
 import stars from '../assets/stars.png';
-import gallery1 from '../assets/gallery1.png';
+import { GALLERY } from '../data';
 
 const Testimonials = () => {
   return (
@@ -24,15 +24,9 @@ const Testimonials = () => {
               </div>
 
               <div className="testimonials-gallery">
-                <DisplayImg img={gallery1} />
-                <DisplayImg img={gallery1} />
-                <DisplayImg img={gallery1} />
-                <DisplayImg img={gallery1} />
-                <DisplayImg img={gallery1} />
-                <DisplayImg img={gallery1} />
-                <DisplayImg img={gallery1} />
-                <DisplayImg img={gallery1} />
-                <DisplayImg img={gallery1} />
+                  {GALLERY.map((img) => (
+                    <DisplayImg img={img} />
+                  ))}
               </div>
           </section>
       </>

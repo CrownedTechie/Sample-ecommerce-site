@@ -4,12 +4,11 @@ import SingleProduct from "../components/SingleProduct";
 import ProductDescription from "../components/ProductDescription";
 import '../stylings/ProductsDetailsPage.css';
 import ProductCard from "../components/ProductCard";
-import lamp from "../assets/graphic-design1.png";
 import { LOGOS } from "../data";
 import DisplayImg from "../components/DisplayImg";
 import Footer from "../components/Footer";
 import { useParams } from 'react-router-dom';
-import { useGetSingleProductQuery, useGetProductsQuery, useGetProductCategoryQuery } from "../api/Products";
+import { useGetSingleProductQuery, useGetProductCategoryQuery } from "../api/Products";
 import { useState, useEffect } from "react";
 
 

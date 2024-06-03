@@ -1,0 +1,143 @@
+.cart-section {
+    background: #FAFAFA;
+    padding: 0 4rem;
+}
+
+.cart-header {
+    padding: 2rem 2.5rem;
+}
+
+.cart-header button {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cart-header button span:nth-of-type(1), .cart-header button span:nth-of-type(2) {
+    color: #252B42;
+    font-weight: 700;
+}
+
+ .cart-header button .open-page {
+    color : #BDBDBD;
+    font-weight: 600;
+}
+
+.cart-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.cart-details {
+    background: white;
+    padding: 2rem;
+    border-radius: 4px;
+}
+
+.cart-details h2 {
+    color: #121517;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1rem 0;
+}
+
+.cart-headings {
+    box-shadow: 0px 11px 40px -17px #00000024;
+    background: #3B4148;
+    color: #fefefe;
+    padding: 1.3rem;
+}
+
+.cart-headings ul {
+    display: grid;
+    grid-template-columns: 4fr 2fr 1fr;
+}
+
+
+        /* ORDER SUMMARY BOX */
+.order-summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: white;
+    padding: 2rem;
+    border-radius: 4px;
+}
+
+
+.order-summary div {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    align-content: center;
+}
+
+.orderSummary-heading h2, .orderSummary-total h4{
+    color: #121517;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.orderSummary-heading p {
+   padding-top: .4rem;
+   color: #121517;
+   font-size: 1.2rem;
+}
+
+.orderSummary-charges h4, .orderSummary-subtotal h4 {
+    color: #3A3C3E;
+    font-weight: 500;
+   font-size: 1.2rem;
+}
+
+.orderSummary-charges p, .orderSummary-btn p {
+    color: #F56666;
+    font-weight: 500;
+    font-size: .9rem;
+}
+
+.orderSummary-subtotal p{
+    color: #3A3C3E;
+    font-size: 1.1rem;
+}
+
+.orderSummary-total p {
+    font-size: 1.4rem;
+   color: #121517;
+   font-weight: 700;
+}
+
+.order-summary div:nth-of-type(5) {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.orderSummary-btn button {
+    padding: 1rem;
+    background: #23A6F0;
+    color: white;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+.orderSummary-btn button:hover {
+    background: white;
+    color: #23A6F0;
+    border: 1px solid #23A6F0;
+}
+
+.orderSummary-btn p {
+    width: 30%;
+    margin-top: -2rem;
+    margin-bottom: 1rem;
+}
+
+.order-summary img {
+    width: 9.625rem;
+    height: .9375rem;
+}

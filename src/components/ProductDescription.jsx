@@ -1,7 +1,6 @@
 import TabButton from "./TabButton";
 import '../stylings/ProductDescription.css';
 import DisplayImg from "./DisplayImg";
-import lamp from "../assets/graphic-design1.png";
 
 const ProductDescription = ({img, noOfReviews, brand, description, category}) => {
     return (
