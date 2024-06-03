@@ -1,6 +1,5 @@
 .order-cart {
     padding-top: 2rem;
-
 }
 
 .order-cart div:nth-child(1) {
@@ -96,4 +95,50 @@
 .orderCart-remove button {
     font-size: .8rem;
     padding: 1rem 0;
+}
+
+
+        /* MOBILE DESIGN */
+@media screen and (max-width: 900px) {
+    .order-cart {
+        position: relative;
+    }
+
+    .orderCart-details {
+        gap: 0;
+    }
+    
+    .orderCart-details h5 {
+        margin-top: 2.2rem;
+    }
+
+    .orderDetails-rating {
+        gap: .2rem;
+    }
+    
+    .orderCart-quantity {
+       position: absolute;
+       bottom: 0;
+       top: 72.3%;
+       right: 0;
+       height: 2rem;
+    }
+
+    .orderCart-quantity span {
+        border: 0.5px solid #3A3C3E;
+        border-radius: .25rem;
+        padding: .1rem 1.5rem;
+    }
+
+    .orderCart-price {
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        width: 40%;
+        position: absolute;
+        justify-content: flex-start;
+        top: 24.9%;
+        left: 20%;
+    }
+    
 }

@@ -1,7 +1,6 @@
 import '../stylings/CartBox.css';
 import { Link } from 'react-router-dom';
 import OrderCart from './OrderCart';
-import IconBtn from './IconBtn';
 import paymentOptions from '../assets/payment-options.png';
 import DisplayImg from './DisplayImg';
 

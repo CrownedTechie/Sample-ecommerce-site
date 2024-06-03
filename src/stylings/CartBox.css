@@ -141,3 +141,28 @@
     width: 9.625rem;
     height: .9375rem;
 }
+
+
+        /* MOBILE DESIGN  */
+@media screen and (max-width: 900px) {
+    .cart-section {
+        padding: .2rem;
+    }
+
+    .cart-header {
+        display: flex;
+        justify-content: center;
+    }
+
+    .cart-box {
+        grid-template-columns: none;
+    }
+
+    .cart-headings {
+        display: none;
+    }
+
+    .cart-details {
+        padding: 1rem;
+    }
+}

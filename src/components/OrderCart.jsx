@@ -20,7 +20,7 @@ const OrderCart = () => {
                 
                 <h5>In Stock</h5>
 
-                <div>
+                <div className="orderDetails-rating">
                   <DisplayImg img={stars} />
                             
                   <span> 10 reviews </span>
