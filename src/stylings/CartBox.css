@@ -165,4 +165,29 @@
     .cart-details {
         padding: 1rem;
     }
+
+
+    .order-summary {
+        display: flex;
+        background: white;
+        padding: 1rem .8rem;
+        border-radius: 4px;
+        gap: 1.5rem;
+    }
+
+    .orderSummary-charges p {
+        text-align: right;
+        width: 14rem;
+    }
+
+    .orderSummary-btn p {
+        width: 30%;
+        margin-top: 0rem;
+        margin-bottom: 1rem;
+    }
+
+    .order-summary img {
+        display: none;
+    }    
+
 }
