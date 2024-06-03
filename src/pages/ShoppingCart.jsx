@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import CartBox from "../components/CartBox";
 import ProductCard from "../components/ProductCard";
 import lamp from "../assets/graphic-design1.png";
-
+import Footer from "../components/Footer";
 
 
 const ShoppingCart = () => {
@@ -15,11 +15,11 @@ const ShoppingCart = () => {
 
             <CartBox />
             
-            <section>
-                <h2> products related to items in your cart </h2>
+            <section className="bestsellerProducts-section">
+                <h3> products related to items in your cart </h3>
                 <hr />
 
-                <div>
+                <div className="">
                     <div>
                         {/* REDUNDANT WILL BE CHANGED LATER */}
                         <ProductCard img={lamp} />
@@ -33,10 +33,9 @@ const ShoppingCart = () => {
                     </div>
                 </div>
 
-
             </section>
            
-
+            <Footer />
 
         </>
     )
