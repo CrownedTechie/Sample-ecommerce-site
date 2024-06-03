@@ -49,3 +49,10 @@
     height: 23.25rem;
     border-radius: 9px;
 }
+
+        /* MOBILE DESIGN */
+@media screen and (max-width: 900px) {
+    .productdescription-section {
+       display: none;
+    }
+}
