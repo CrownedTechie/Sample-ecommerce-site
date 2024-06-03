@@ -12,7 +12,7 @@ import Testimonials from "../components/Testimonials";
 import CallToAction from "../components/CallToAction";
 import Footer from "../components/Footer";
 import '../stylings/HomePage.css';
-import { useGetProductsQuery, useGetProductCategoryQuery } from "../api/Products";
+import { useGetProductsQuery, useGetHomeDecorQuery } from "../api/Products";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -28,7 +28,7 @@ const ShopPage = () => {
 
   const { data: allProducts, error: allProductsError, isLoading: allProductsLoading } = useGetProductsQuery({ limit });
   
-  const { data: homeDecor, error: homeDecorError, isLoading: homeDecorLoading } = useGetProductCategoryQuery();
+  const { data: homeDecor, error: homeDecorError, isLoading: homeDecorLoading } = useGetHomeDecorQuery();
 
   console.log(homeDecor);
   
@@ -53,7 +53,7 @@ const ShopPage = () => {
               {Array.isArray(products) && products.map((product) => (
                 <Link to={`/product/${product.id}`}  key={product.id} >
                   <ProductCard 
-                    img={product.images[0]}
+                    img={product.thumbnail}
                     title={product.title}
                     category={product.category}
                     oldPrice={product.price}
@@ -82,7 +82,9 @@ const ShopPage = () => {
           <section className="featured-posts-section">
             <div className="featured-posts-card">
               {Array.isArray(homeDecor.products) && homeDecor.products.map((decor) => (
-                <PostCard img={decor.images[0]} title={ decor.title } description={ decor.description } key={ decor.id } />
+                  <Link to={`/product/${decor.id}`}  key={decor.id} >
+                    <PostCard img={decor.thumbnail} title={ decor.title } description={ decor.description } />
+                  </Link>
               ))}
             </div>
           </section>

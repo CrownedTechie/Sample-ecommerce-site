@@ -7,7 +7,7 @@ export const productsApi = createApi({
     getProducts: builder.query({
       query: ({limit}) => `products?limit=${limit}`,
     }),
-    getProductCategory: builder.query({
+    getHomeDecor: builder.query({
       query: () => 'products/category/home-decoration?limit=3',
     }),
     getSingleProduct: builder.query({
@@ -17,4 +17,4 @@ export const productsApi = createApi({
     })
 });
 
-export const { useGetProductsQuery, useGetProductCategoryQuery, useGetSingleProductQuery } = productsApi;
+export const { useGetProductsQuery, useGetHomeDecorQuery, useGetSingleProductQuery } = productsApi;

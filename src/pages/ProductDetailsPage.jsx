@@ -41,6 +41,7 @@ const ProductDetailsPage = () => {
             img={product.images[1]}
             brand={product.brand}
             description={product.description}
+            category={product.category}
           />
         }
 

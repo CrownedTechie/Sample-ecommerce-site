@@ -3,7 +3,7 @@ import '../stylings/ProductDescription.css';
 import DisplayImg from "./DisplayImg";
 import lamp from "../assets/graphic-design1.png";
 
-const ProductDescription = ({img, noOfReviews, brand, description}) => {
+const ProductDescription = ({img, noOfReviews, brand, description, category}) => {
     return (
         <>
             <section className="productdescription-section">
@@ -18,7 +18,7 @@ const ProductDescription = ({img, noOfReviews, brand, description}) => {
                 <article>
                     <div className="extraContent-col">
                         <div className="extra-content">
-                            <h3>{brand} </h3>
+                            <h3>{brand} {category} </h3>
 
                             <p> {description} </p>
 
