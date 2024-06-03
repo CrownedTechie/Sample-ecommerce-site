@@ -18,6 +18,13 @@ import { useState } from "react";
 const ShopPage = () => {
   const [limit, setLimit] = useState(10);
 
+  const loadMoreProducts = () => {
+    if (limit < 30) {
+      setLimit((prevLimit) => Math.min(prevLimit + 5, 30));
+    }
+  };
+
+
   const { data: allProducts, error: allProductsError, isLoading: allProductsLoading } = useGetProductsQuery({ limit });
   
   const { data: homeDecor, error: homeDecorError, isLoading: homeDecorLoading } = useGetProductCategoryQuery();
@@ -53,7 +60,8 @@ const ShopPage = () => {
                 />
               ))}
             </div>
-            <IconBtn value='load more products' styling='bestseller-products-btn' />
+
+           { limit < 30 && <IconBtn value='load more products' styling='bestseller-products-btn' btnClick={loadMoreProducts} />}
           </section>
         </FeaturedProduct>
 
@@ -71,7 +79,7 @@ const ShopPage = () => {
           <section className="featured-posts-section">
             <div className="featured-posts-card">
               {Array.isArray(homeDecor.products) && homeDecor.products.map((decor) => (
-                <PostCard img={decor.images[0]} title={ decor.title } description={ decor.description } />
+                <PostCard img={decor.images[0]} title={ decor.title } description={ decor.description } key={ decor.id } />
               ))}
             </div>
           </section>
