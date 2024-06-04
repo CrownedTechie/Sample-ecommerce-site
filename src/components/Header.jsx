@@ -35,7 +35,7 @@ const Header = () => {
                 <div className='header-btns'>
                     <IconBtn icon='person' value='Login / Register' btnBoxStyling='iconBtn-person' />
                     <IconBtn icon='search' styling='iconBtn-search' />
-                    <IconBtn icon='shopping_cart' styling='iconBtn-shoppingCart' />
+                   <Link to={'/shoppingcart'}> <IconBtn icon='shopping_cart' styling='iconBtn-shoppingCart' /> </Link>
                     <IconBtn icon='favorite' btnBoxStyling='iconBtn-favorite' />
                     <IconBtn icon={isMenuOpen ? 'menu_open' : 'menu'} btnBoxStyling='iconBtn-menu' iconClick={toggleMenu} />
                 </div>
