@@ -7,10 +7,9 @@ import ProductCard from "../components/ProductCard";
 import { LOGOS } from "../data";
 import DisplayImg from "../components/DisplayImg";
 import Footer from "../components/Footer";
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useGetSingleProductQuery, useGetProductCategoryQuery } from "../api/Products";
 import { useState, useEffect } from "react";
-
 
 
 const ProductDetailsPage = () => {
@@ -26,7 +25,15 @@ const ProductDetailsPage = () => {
     }
   }, [product]);
 
-  const { data: categoryData, error: categoryDataError, isLoading: categoryDataLoading} = useGetProductCategoryQuery(category);
+  const { data: categoryData, error: categoryDataError, isLoading: categoryDataLoading, refetch: refetchCategory } = useGetProductCategoryQuery(category, {
+    skip: !category
+  });
+
+  useEffect(() => {
+    if (category) {
+      refetchCategory();
+    }
+  }, [category, refetchCategory]);
 
   if (productLoading || categoryDataLoading) return <div>Loading...</div>;
   if (productError || categoryDataError) return <div>Error: {productError?.message || categoryDataError?.message}</div>;
@@ -67,15 +74,17 @@ const ProductDetailsPage = () => {
           <div>
             <div>
               {categoryData && Array.isArray(categoryData.products) && categoryData.products.map((product) => (
-                <ProductCard
-                  key={product.id}
-                  img={product.images[0]}
-                  title={product.title}
-                  brand={product.brand}
-                  category={product.category}
-                  oldPrice={product.price}
-                  discountedPrice={product.discountPercentage}
-                />
+                <Link to={`/product/${product.id}`} key={product.id} >
+                  <ProductCard
+                    key={product.id}
+                    img={product.images[0]}
+                    title={product.title}
+                    brand={product.brand}
+                    category={product.category}
+                    oldPrice={product.price}
+                    discountedPrice={product.discountPercentage}
+                  />
+                </Link>
               ))}
             </div>
           </div>
