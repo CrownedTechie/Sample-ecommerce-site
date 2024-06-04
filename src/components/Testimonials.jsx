@@ -24,8 +24,8 @@ const Testimonials = () => {
               </div>
 
               <div className="testimonials-gallery">
-                  {GALLERY.map((img) => (
-                    <DisplayImg img={img} />
+                  {GALLERY.map((img, index) => (
+                    <DisplayImg img={img} key={index} />
                   ))}
               </div>
           </section>

@@ -135,12 +135,16 @@
     width: 30%;
     margin-top: -2rem;
     margin-bottom: 1rem;
+    margin-left: 70%;
+    text-align: right;
 }
 
 .order-summary img {
     width: 9.625rem;
     height: .9375rem;
 }
+
+
 
 
         /* MOBILE DESIGN  */
@@ -185,13 +189,11 @@
     }
 
     .orderSummary-btn p {
-        width: 30%;
+        width: 50%;
         margin-top: 0rem;
-        margin-bottom: 1rem;
     }
-
+  
     .order-summary img {
         display: none;
     }    
-
 }

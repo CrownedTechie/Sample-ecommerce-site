@@ -33,6 +33,7 @@
 .singleproduct-img {
     width: 33rem;
     height: 29rem;
+    max-width: 100%;
 }
 
 .singleproduct-section article {
@@ -153,7 +154,7 @@
 
     .singleproduct-section article {
         grid-template-columns: none;
-        padding: .8rem 2.5rem;
+        padding: .8rem 1.4rem;
     }
 
     .singleproduct-section article > div:nth-child(1) {

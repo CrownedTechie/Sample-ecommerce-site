@@ -4,7 +4,7 @@ import IconBtn from './IconBtn';
 const CallToAction = () => {
   return (
       <>
-          <section>
+          <section className="callToAction-section">
             <div className="CallToAction-heading">
               <h6>Designing Better Experience</h6>
               <h2>Problems trying to resolve the conflict between </h2>

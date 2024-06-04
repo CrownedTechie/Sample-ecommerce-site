@@ -109,11 +109,15 @@
     }
 
     .orderCart-details h4 {
-       width: 100%;
+        width: 10rem;
     }
     
     .orderCart-details h5 {
         margin-top: 2.2rem;
+    }
+
+    .order-cart div:nth-child(1) {
+        grid-template-columns: 2fr 1fr 2fr 1fr;
     }
 
     .orderDetails-rating {
@@ -123,7 +127,7 @@
     .orderCart-quantity {
        position: absolute;
        bottom: 0;
-       top: 75%;
+       top: 82%;
        right: 0;
        height: 2rem;
     }
@@ -142,7 +146,7 @@
         position: absolute;
         justify-content: flex-start;
         top: 24.9%;
-        left: 20%;
+        left: 28%;
         margin-top: .3rem;
     }
     
