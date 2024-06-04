@@ -127,7 +127,7 @@
     .orderCart-quantity {
        position: absolute;
        bottom: 0;
-       top: 82%;
+       top: 77.65%;
        right: 0;
        height: 2rem;
     }
@@ -146,7 +146,7 @@
         position: absolute;
         justify-content: flex-start;
         top: 24.9%;
-        left: 28%;
+        left: 26.85%;
         margin-top: .3rem;
     }
     
