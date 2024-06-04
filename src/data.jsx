@@ -43,17 +43,17 @@ export const NAV_LINKS_MOBILE = [
     {
         id: 2,
         name: 'Product',
-        link: '/product'
+        link: '/'
     },
     {
         id: 3,
         name: 'Pricing',
-        link: '/pricing'
+        link: '/'
     },
     {
         id: 4,
         name: 'Contact',
-        link: '/contact'
+        link: '/'
     },
 ]; 
 

@@ -180,6 +180,10 @@
         width: 14rem;
     }
 
+    .orderSummary-btn button {
+        width: 70%;
+    }
+
     .orderSummary-btn p {
         width: 30%;
         margin-top: 0rem;
